@@ -37,7 +37,7 @@ import argparse
 import time
 from functools import partial
 from ppuda.config import init_config
-from ppuda.vision.loader import image_loader
+from ppuda.vision.loader import image_loader, to_few_shot
 from ghn3 import GHN3, log, Trainer, DeepNets1MDDP, setup_ddp, clean_ddp
 
 log = partial(log, flush=True)
@@ -50,6 +50,10 @@ def main():
     parser.add_argument('--ghn2', action='store_true', help='train GHN-2, also can use code from'
                                                             ' https://github.com/facebookresearch/ppuda to train GHN-2')
     parser.add_argument('--interm_epoch', type=int, default=5, help='intermediate epochs to keep checkpoints for')
+
+    parser.add_argument('--n_shots', type=int, default=None,
+                        help='number of training images per class for fine-tuning experiments')
+
     ghn2 = parser.parse_known_args()[0].ghn2
 
     ddp = setup_ddp()
@@ -68,6 +72,7 @@ def main():
     is_imagenet = args.dataset.startswith('imagenet')
 
     log('loading the %s dataset...' % args.dataset.upper())
+    
     train_queue, _, num_classes = image_loader(args.dataset,
                                                args.data_dir,
                                                im_size=args.imsize,
@@ -75,7 +80,15 @@ def main():
                                                batch_size=args.batch_size,
                                                num_workers=args.num_workers,
                                                seed=args.seed,
-                                               verbose=ddp.rank == 0)
+                                               verbose=ddp.rank == 0,
+                                               n_shots=args.n_shots)
+    
+
+    # EL following lines are checking the consistency of the loaded data
+    # print('train_queue length:', len(train_queue))
+    # print('num_classes:', num_classes)
+    # return
+    # end of debugging
 
     hid = args.hid
     s = 16 if is_imagenet else 11
