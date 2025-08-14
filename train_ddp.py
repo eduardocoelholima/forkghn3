@@ -50,7 +50,7 @@ import argparse
 import time
 from functools import partial
 from ppuda.config import init_config
-from ppuda.utils import capacity
+from ppuda.utils import capacity, adjust_net
 from ppuda.vision.loader import image_loader
 from ghn3 import log, Trainer, setup_ddp, transforms_imagenet, clean_ddp
 
@@ -82,7 +82,13 @@ def main():
                                transforms_train_val=transforms_imagenet(im_size=args.imsize, timm_aug=args.timm_aug),
                                verbose=ddp.rank == 0)[0]
 
-    trainer = Trainer(eval(f'torchvision.models.{args.arch}()'),
+    # loads model from torchvision, adjusts to the dataset
+    num_classes=10 if args.dataset=='cifar10' else 1000
+    is_imagenet=True if args.dataset=='imagenet' else False
+    model = eval(f'torchvision.models.{args.arch}(num_classes=num_classes)')
+    model = adjust_net(model, large_input=is_imagenet)
+
+    trainer = Trainer(model,
                       opt=args.opt,
                       opt_args={'lr': args.lr, 'weight_decay': args.wd, 'momentum': args.momentum},
                       scheduler='mstep' if args.scheduler is None else args.scheduler,
