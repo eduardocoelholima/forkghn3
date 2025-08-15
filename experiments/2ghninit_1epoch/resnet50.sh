@@ -1,6 +1,6 @@
 #!/bin/bash
 
-resnet50_state="resnet50-ghn3init"
+resnet50_state="resnet50-ghn3init-b8e675b-1111"
 
 # echo "This is your conda environment:"
 # conda env list|grep "\*"

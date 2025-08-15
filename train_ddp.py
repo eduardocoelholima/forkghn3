@@ -52,7 +52,7 @@ from functools import partial
 from ppuda.config import init_config
 from ppuda.utils import capacity, adjust_net
 from ppuda.vision.loader import image_loader
-from ghn3 import log, Trainer, setup_ddp, transforms_imagenet, clean_ddp
+from ghn3 import log, Trainer, setup_ddp, transforms_imagenet, clean_ddp, transforms_cifar10
 
 log = partial(log, flush=True)
 
@@ -69,6 +69,15 @@ def main():
     args = init_config(mode='train_net', parser=parser, verbose=ddp.rank == 0, debug=0, beta=1e-5)
     # beta is the amount of noise added to params (if GHN is used for init, otherwise ignored), default: 1e-5
 
+
+    # loads model from torchvision, adjusts to the dataset
+    num_classes = 10 if args.dataset=='cifar10' else 1000
+    is_imagenet = True if args.dataset=='imagenet' else False
+    model = eval(f'torchvision.models.{args.arch}(num_classes=num_classes)')
+    model = adjust_net(model, large_input=is_imagenet)
+    data_transforms = transforms_cifar10() if args.dataset=='cifar10' else transforms_imagenet(im_size=args.imsize, timm_aug=args.timm_aug)
+
+    # training queue checks the transform for imagenet or cifar10
     log('loading the %s dataset...' % args.dataset.upper())
     train_queue = image_loader(args.dataset,
                                args.data_dir,
@@ -79,14 +88,9 @@ def main():
                                seed=args.seed,
                                ddp=ddp.ddp,
                                im_size=args.imsize,
-                               transforms_train_val=transforms_imagenet(im_size=args.imsize, timm_aug=args.timm_aug),
+                               transforms_train_val=data_transforms,
                                verbose=ddp.rank == 0)[0]
 
-    # loads model from torchvision, adjusts to the dataset
-    num_classes=10 if args.dataset=='cifar10' else 1000
-    is_imagenet=True if args.dataset=='imagenet' else False
-    model = eval(f'torchvision.models.{args.arch}(num_classes=num_classes)')
-    model = adjust_net(model, large_input=is_imagenet)
 
     trainer = Trainer(model,
                       opt=args.opt,
