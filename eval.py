@@ -23,7 +23,7 @@ from ppuda.utils import infer, adjust_net
 from ppuda.vision.loader import image_loader
 
 
-args = init_config(mode='eval', debug=0, arch='resnet50')
+args = init_config(mode='eval', debug=0, verbose=False, arch='resnet50')
 is_imagenet = args.dataset.startswith('imagenet')
 print('loading the %s dataset...' % args.dataset)
 val_loader, num_classes = image_loader(args.dataset,
@@ -60,6 +60,6 @@ print('Running evaluation for {} with {:.2f}M parameters...'.format(args.arch.up
 if is_imagenet:
     val_loader.sampler.generator.manual_seed(args.seed)  # set the generator seed to reproduce results
 start = time.time()
-top1, top5 = infer(model, val_loader, verbose=False)
+top1, top5 = infer(model, val_loader, verbose=True)
 print('\ntesting: top1={:.3f}, top5={:.3f} ({} eval samples, time={:.2f} seconds)'.format(
     top1, top5, val_loader.dataset.num_examples, time.time() - start), flush=True)
