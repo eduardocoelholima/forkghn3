@@ -1,0 +1,48 @@
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-1p-c45a103-1111/checkpoint.pt
+testing: top1=31.230, top5=79.770 (10000 eval samples, time=3.90 seconds)
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-2p-c45a103-1111/checkpoint.pt
+testing: top1=27.760, top5=81.930 (10000 eval samples, time=3.82 seconds)
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-3p-c45a103-1111/checkpoint.pt
+testing: top1=25.110, top5=85.110 (10000 eval samples, time=3.79 seconds)
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-4p-c45a103-1111/checkpoint.pt
+testing: top1=26.760, top5=77.810 (10000 eval samples, time=3.83 seconds)
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-5p-c45a103-1111/checkpoint.pt
+testing: top1=30.450, top5=79.340 (10000 eval samples, time=3.85 seconds)
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-6p-c45a103-1111/checkpoint.pt
+testing: top1=34.190, top5=83.600 (10000 eval samples, time=3.77 seconds)
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-7p-c45a103-1111/checkpoint.pt
+testing: top1=35.030, top5=80.790 (10000 eval samples, time=3.76 seconds)
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-8p-c45a103-1111/checkpoint.pt
+testing: top1=28.980, top5=81.960 (10000 eval samples, time=3.81 seconds)
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-9p-c45a103-1111/checkpoint.pt
+testing: top1=30.000, top5=86.850 (10000 eval samples, time=3.76 seconds)
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-10p-b3289ac-1111/checkpoint.pt
+testing: top1=33.65, top5=83.08 (10000 eval samples, time=3.76 seconds)
+testing: top1=33.650, top5=83.080 (10000 eval samples, time=3.76 seconds)
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-20p-b3289ac-1111/checkpoint.pt
+testing: top1=32.30, top5=79.58 (10000 eval samples, time=3.87 seconds)
+testing: top1=32.300, top5=79.580 (10000 eval samples, time=3.95 seconds)
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-30p-b3289ac-1111/checkpoint.pt
+testing: top1=35.39, top5=88.13 (10000 eval samples, time=3.85 seconds)
+testing: top1=35.390, top5=88.130 (10000 eval samples, time=3.92 seconds)
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-40p-b3289ac-1111/checkpoint.pt
+testing: top1=36.05, top5=79.85 (10000 eval samples, time=3.88 seconds)
+testing: top1=36.050, top5=79.850 (10000 eval samples, time=3.92 seconds)
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-50p-b3289ac-1111/checkpoint.pt
+testing: top1=27.68, top5=85.57 (10000 eval samples, time=3.80 seconds)
+testing: top1=27.680, top5=85.570 (10000 eval samples, time=3.96 seconds)
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-60p-d442e08-1111/checkpoint.pt
+testing: top1=38.82, top5=85.91 (10000 eval samples, time=3.84 seconds)
+testing: top1=38.820, top5=85.910 (10000 eval samples, time=3.85 seconds)
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-70p-d442e08-1111/checkpoint.pt
+testing: top1=38.59, top5=81.36 (10000 eval samples, time=4.00 seconds)
+testing: top1=38.590, top5=81.360 (10000 eval samples, time=4.22 seconds)
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-80p-d442e08-1111/checkpoint.pt
+testing: top1=45.04, top5=86.27 (10000 eval samples, time=3.86 seconds)
+testing: top1=45.040, top5=86.270 (10000 eval samples, time=4.23 seconds)
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-90p-d442e08-1111/checkpoint.pt
+testing: top1=41.96, top5=88.98 (10000 eval samples, time=4.01 seconds)
+testing: top1=41.960, top5=88.980 (10000 eval samples, time=4.04 seconds)
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-b3289ac-1111/checkpoint.pt
+testing: top1=37.70, top5=87.38 (10000 eval samples, time=3.84 seconds)
+testing: top1=37.700, top5=87.380 (10000 eval samples, time=3.92 seconds)

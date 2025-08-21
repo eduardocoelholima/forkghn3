@@ -1,0 +1,57 @@
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-1p-c45a103-1111/checkpoint.pt
+testing: top1=44.84, top5=92.09 (10000 eval samples, time=6.41 seconds)
+testing: top1=44.840, top5=92.090 (10000 eval samples, time=6.42 seconds)
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-2p-c45a103-1111/checkpoint.pt
+testing: top1=52.62, top5=93.77 (10000 eval samples, time=6.27 seconds)
+testing: top1=52.620, top5=93.770 (10000 eval samples, time=6.32 seconds)
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-3p-c45a103-1111/checkpoint.pt
+testing: top1=44.62, top5=92.37 (10000 eval samples, time=6.33 seconds)
+testing: top1=44.620, top5=92.370 (10000 eval samples, time=6.33 seconds)
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-4p-c45a103-1111/checkpoint.pt
+testing: top1=44.60, top5=91.57 (10000 eval samples, time=6.30 seconds)
+testing: top1=44.600, top5=91.570 (10000 eval samples, time=6.39 seconds)
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-5p-c45a103-1111/checkpoint.pt
+testing: top1=48.63, top5=92.50 (10000 eval samples, time=6.27 seconds)
+testing: top1=48.630, top5=92.500 (10000 eval samples, time=6.28 seconds)
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-6p-c45a103-1111/checkpoint.pt
+testing: top1=49.45, top5=93.44 (10000 eval samples, time=6.27 seconds)
+testing: top1=49.450, top5=93.440 (10000 eval samples, time=6.27 seconds)
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-7p-c45a103-1111/checkpoint.pt
+testing: top1=46.16, top5=91.84 (10000 eval samples, time=6.25 seconds)
+testing: top1=46.160, top5=91.840 (10000 eval samples, time=6.29 seconds)
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-8p-c45a103-1111/checkpoint.pt
+testing: top1=50.53, top5=92.98 (10000 eval samples, time=6.27 seconds)
+testing: top1=50.530, top5=92.980 (10000 eval samples, time=6.36 seconds)
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-9p-c45a103-1111/checkpoint.pt
+testing: top1=48.41, top5=93.34 (10000 eval samples, time=6.26 seconds)
+testing: top1=48.410, top5=93.340 (10000 eval samples, time=8.27 seconds)
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-10p-b3289ac-1111/checkpoint.pt
+testing: top1=50.56, top5=93.96 (10000 eval samples, time=6.27 seconds)
+testing: top1=50.560, top5=93.960 (10000 eval samples, time=6.31 seconds)
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-20p-b3289ac-1111/checkpoint.pt
+testing: top1=52.24, top5=93.89 (10000 eval samples, time=6.33 seconds)
+testing: top1=52.240, top5=93.890 (10000 eval samples, time=6.39 seconds)
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-30p-b3289ac-1111/checkpoint.pt
+testing: top1=54.79, top5=94.46 (10000 eval samples, time=6.32 seconds)
+testing: top1=54.790, top5=94.460 (10000 eval samples, time=6.37 seconds)
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-40p-b3289ac-1111/checkpoint.pt
+testing: top1=54.90, top5=94.60 (10000 eval samples, time=6.34 seconds)
+testing: top1=54.900, top5=94.600 (10000 eval samples, time=6.36 seconds)
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-50p-b3289ac-1111/checkpoint.pt
+testing: top1=50.96, top5=93.86 (10000 eval samples, time=6.31 seconds)
+testing: top1=50.960, top5=93.860 (10000 eval samples, time=6.31 seconds)
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-60p-d442e08-1111/checkpoint.pt
+testing: top1=52.62, top5=94.71 (10000 eval samples, time=6.32 seconds)
+testing: top1=52.620, top5=94.710 (10000 eval samples, time=6.34 seconds)
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-70p-d442e08-1111/checkpoint.pt
+testing: top1=58.33, top5=95.24 (10000 eval samples, time=6.27 seconds)
+testing: top1=58.330, top5=95.240 (10000 eval samples, time=6.27 seconds)
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-80p-d442e08-1111/checkpoint.pt
+testing: top1=53.78, top5=94.27 (10000 eval samples, time=6.29 seconds)
+testing: top1=53.780, top5=94.270 (10000 eval samples, time=6.33 seconds)
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-90p-d442e08-1111/checkpoint.pt
+testing: top1=59.49, top5=95.81 (10000 eval samples, time=6.26 seconds)
+testing: top1=59.490, top5=95.810 (10000 eval samples, time=6.28 seconds)
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-b3289ac-1111/checkpoint.pt
+testing: top1=58.56, top5=95.88 (10000 eval samples, time=6.31 seconds)
+testing: top1=58.560, top5=95.880 (10000 eval samples, time=6.32 seconds)

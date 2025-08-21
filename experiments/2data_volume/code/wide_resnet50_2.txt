@@ -1,0 +1,1881 @@
+
+
+Environment:
+git commit          : 75d5573
+hostname            : clx-a-01.rc.rit.edu
+torch               : 2.5.1
+torchvision         : 0.20.1
+cuda available      : True
+cudnn enabled       : True
+cuda version        : 12.4
+start time          : 20250816-212051
+
+Script Arguments (train_net mode):
+amp                 : False
+arch                : wide_resnet50_2
+auxiliary           : False
+auxiliary_weight    : 0.4
+batch_size          : 128
+bce                 : False
+beta                : 1e-05
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-1p-c45a103-1111/checkpoint.pt
+compile             : None
+cutout              : False
+cutout_length       : 16
+data_dir            : ./data
+dataset             : cifar10
+debug               : 0
+device              : cuda
+drop_path_prob      : 0
+epochs              : 1
+gamma               : 0.1
+grad_clip           : 5
+imsize              : 32
+init                : rand
+init_channels       : 36
+interm_epoch        : 5
+label_smooth        : 0.1
+layer               : 0
+layers              : 20
+log_interval        : 100
+lr                  : 0.025
+lr_steps            : [30, 60]
+momentum            : 0.9
+multigpu            : False
+n_shots             : None
+name                : tmp
+noise               : False
+num_workers         : 0
+opt                 : sgd
+pretrained          : False
+save_dir            : ./checkpoints
+scheduler           : None
+seed                : 1111
+split               : predefined
+test_batch_size     : 64
+timm_aug            : False
+val                 : False
+wd                  : 0.0001
+
+
+Experiment dir: ./checkpoints/tmp-75d5573-1111
+
+loading the CIFAR10 dataset...
+Files already downloaded and verified
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, 50000 train samples (checksum=120.708), 10000 test samples (checksum=121.529)
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-1p-c45a103-1111/checkpoint.pt...
+404 Client Error. (Request ID: Root=1-68a12e78-0ad3f29639aa0fe03bed738f;01776494-0b7c-4ec7-8c02-498139c5d16a)
+
+Entry Not Found for url: https://huggingface.co/SamsungSAILMontreal/ghn3/resolve/main//shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-1p-c45a103-1111/checkpoint.pt. 
+Trying to load from local file...
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-1p-c45a103-1111/checkpoint.pt with 4531500 parameters is done!
+number of parameter tensors predicted using GHN: 161, total parameters predicted: 66847050 (MATCHED!), time to predict (on CPU): 0.2925 sec
+
+Starting training WIDE_RESNET50_2 with 66847050 parameters!
+
+epoch=001/001, lr=2.500000e-02
+batch=0001/0391 	 loss=3.8104	top1=26.5625	top5=85.9375 	 5.1079 (sec/batch), mem ram/gpu: 1.70/5.93 (G)
+batch=0100/0391 	 loss=5.1756	top1=15.2969	top5=61.7969 	 0.2135 (sec/batch), mem ram/gpu: 1.72/5.93 (G)
+batch=0200/0391 	 loss=4.2022	top1=16.0273	top5=63.7266 	 0.1644 (sec/batch), mem ram/gpu: 1.72/5.93 (G)
+batch=0300/0391 	 loss=3.7765	top1=16.9349	top5=65.5156 	 0.1482 (sec/batch), mem ram/gpu: 1.72/5.93 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=299
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+batch=0390/0391 	 loss=3.5512	top1=17.5401	top5=66.5865 	 0.1447 (sec/batch), mem ram/gpu: 1.72/5.93 (G)
+batch=0391/0391 	 loss=3.5502	top1=17.5600	top5=66.5920 	 0.1460 (sec/batch), mem ram/gpu: 1.73/5.93 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=390
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+done at 20250816-212207!
+loading the cifar10 dataset...
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, none train samples (checksum=none), 10000 test samples (checksum=121.529)
+Model WIDE_RESNET50_2 with 66.84705 parameters loaded from epoch 0, step 390.
+Running evaluation for WIDE_RESNET50_2 with 66.85M parameters...
+
+testing: top1=25.67, top5=72.96 (10000 eval samples, time=4.46 seconds)
+
+testing: top1=25.670, top5=72.960 (10000 eval samples, time=4.47 seconds)
+
+
+Environment:
+git commit          : 75d5573
+hostname            : clx-a-01.rc.rit.edu
+torch               : 2.5.1
+torchvision         : 0.20.1
+cuda available      : True
+cudnn enabled       : True
+cuda version        : 12.4
+start time          : 20250816-212223
+
+Script Arguments (train_net mode):
+amp                 : False
+arch                : wide_resnet50_2
+auxiliary           : False
+auxiliary_weight    : 0.4
+batch_size          : 128
+bce                 : False
+beta                : 1e-05
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-2p-c45a103-1111/checkpoint.pt
+compile             : None
+cutout              : False
+cutout_length       : 16
+data_dir            : ./data
+dataset             : cifar10
+debug               : 0
+device              : cuda
+drop_path_prob      : 0
+epochs              : 1
+gamma               : 0.1
+grad_clip           : 5
+imsize              : 32
+init                : rand
+init_channels       : 36
+interm_epoch        : 5
+label_smooth        : 0.1
+layer               : 0
+layers              : 20
+log_interval        : 100
+lr                  : 0.025
+lr_steps            : [30, 60]
+momentum            : 0.9
+multigpu            : False
+n_shots             : None
+name                : tmp
+noise               : False
+num_workers         : 0
+opt                 : sgd
+pretrained          : False
+save_dir            : ./checkpoints
+scheduler           : None
+seed                : 1111
+split               : predefined
+test_batch_size     : 64
+timm_aug            : False
+val                 : False
+wd                  : 0.0001
+
+
+Experiment dir: ./checkpoints/tmp-75d5573-1111
+
+loading the CIFAR10 dataset...
+Files already downloaded and verified
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, 50000 train samples (checksum=120.708), 10000 test samples (checksum=121.529)
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-2p-c45a103-1111/checkpoint.pt...
+404 Client Error. (Request ID: Root=1-68a12ed2-452056b42b2fff242c0f8815;6ee5e31d-3521-4193-83cc-0eaa61912566)
+
+Entry Not Found for url: https://huggingface.co/SamsungSAILMontreal/ghn3/resolve/main//shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-2p-c45a103-1111/checkpoint.pt. 
+Trying to load from local file...
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-2p-c45a103-1111/checkpoint.pt with 4531500 parameters is done!
+number of parameter tensors predicted using GHN: 161, total parameters predicted: 66847050 (MATCHED!), time to predict (on CPU): 0.2730 sec
+
+Starting training WIDE_RESNET50_2 with 66847050 parameters!
+
+epoch=001/001, lr=2.500000e-02
+batch=0001/0391 	 loss=3.7085	top1=22.6562	top5=89.8438 	 0.3027 (sec/batch), mem ram/gpu: 1.69/5.93 (G)
+batch=0100/0391 	 loss=3.9138	top1=16.8672	top5=66.8438 	 0.1210 (sec/batch), mem ram/gpu: 1.70/5.93 (G)
+batch=0200/0391 	 loss=3.3758	top1=18.6797	top5=69.6367 	 0.1188 (sec/batch), mem ram/gpu: 1.70/5.93 (G)
+batch=0300/0391 	 loss=3.0801	top1=20.3672	top5=72.0365 	 0.1181 (sec/batch), mem ram/gpu: 1.70/5.93 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=299
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+batch=0390/0391 	 loss=2.8953	top1=21.9772	top5=73.8221 	 0.1222 (sec/batch), mem ram/gpu: 1.71/5.93 (G)
+batch=0391/0391 	 loss=2.8942	top1=21.9880	top5=73.8300 	 0.1225 (sec/batch), mem ram/gpu: 1.72/5.93 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=390
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+done at 20250816-212326!
+loading the cifar10 dataset...
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, none train samples (checksum=none), 10000 test samples (checksum=121.529)
+Model WIDE_RESNET50_2 with 66.84705 parameters loaded from epoch 0, step 390.
+Running evaluation for WIDE_RESNET50_2 with 66.85M parameters...
+
+testing: top1=30.68, top5=84.25 (10000 eval samples, time=4.31 seconds)
+
+testing: top1=30.680, top5=84.250 (10000 eval samples, time=4.31 seconds)
+
+
+Environment:
+git commit          : 75d5573
+hostname            : clx-a-01.rc.rit.edu
+torch               : 2.5.1
+torchvision         : 0.20.1
+cuda available      : True
+cudnn enabled       : True
+cuda version        : 12.4
+start time          : 20250816-212342
+
+Script Arguments (train_net mode):
+amp                 : False
+arch                : wide_resnet50_2
+auxiliary           : False
+auxiliary_weight    : 0.4
+batch_size          : 128
+bce                 : False
+beta                : 1e-05
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-3p-c45a103-1111/checkpoint.pt
+compile             : None
+cutout              : False
+cutout_length       : 16
+data_dir            : ./data
+dataset             : cifar10
+debug               : 0
+device              : cuda
+drop_path_prob      : 0
+epochs              : 1
+gamma               : 0.1
+grad_clip           : 5
+imsize              : 32
+init                : rand
+init_channels       : 36
+interm_epoch        : 5
+label_smooth        : 0.1
+layer               : 0
+layers              : 20
+log_interval        : 100
+lr                  : 0.025
+lr_steps            : [30, 60]
+momentum            : 0.9
+multigpu            : False
+n_shots             : None
+name                : tmp
+noise               : False
+num_workers         : 0
+opt                 : sgd
+pretrained          : False
+save_dir            : ./checkpoints
+scheduler           : None
+seed                : 1111
+split               : predefined
+test_batch_size     : 64
+timm_aug            : False
+val                 : False
+wd                  : 0.0001
+
+
+Experiment dir: ./checkpoints/tmp-75d5573-1111
+
+loading the CIFAR10 dataset...
+Files already downloaded and verified
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, 50000 train samples (checksum=120.708), 10000 test samples (checksum=121.529)
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-3p-c45a103-1111/checkpoint.pt...
+404 Client Error. (Request ID: Root=1-68a12f21-4193d79c2c1815b017fe7e16;c9268de8-e670-4a3b-af76-54a2ae14b803)
+
+Entry Not Found for url: https://huggingface.co/SamsungSAILMontreal/ghn3/resolve/main//shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-3p-c45a103-1111/checkpoint.pt. 
+Trying to load from local file...
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-3p-c45a103-1111/checkpoint.pt with 4531500 parameters is done!
+number of parameter tensors predicted using GHN: 161, total parameters predicted: 66847050 (MATCHED!), time to predict (on CPU): 0.2572 sec
+
+Starting training WIDE_RESNET50_2 with 66847050 parameters!
+
+epoch=001/001, lr=2.500000e-02
+batch=0001/0391 	 loss=3.4013	top1=28.9062	top5=95.3125 	 0.2991 (sec/batch), mem ram/gpu: 1.70/5.93 (G)
+batch=0100/0391 	 loss=3.9180	top1=18.4922	top5=67.1172 	 0.1212 (sec/batch), mem ram/gpu: 1.71/5.93 (G)
+batch=0200/0391 	 loss=3.5759	top1=19.9258	top5=70.0664 	 0.1187 (sec/batch), mem ram/gpu: 1.71/5.93 (G)
+batch=0300/0391 	 loss=3.3277	top1=20.7240	top5=70.9062 	 0.1181 (sec/batch), mem ram/gpu: 1.71/5.93 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=299
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+batch=0390/0391 	 loss=3.1274	top1=21.4403	top5=71.9892 	 0.1283 (sec/batch), mem ram/gpu: 1.71/5.93 (G)
+batch=0391/0391 	 loss=3.1260	top1=21.4600	top5=71.9980 	 0.1286 (sec/batch), mem ram/gpu: 1.72/5.93 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=390
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+done at 20250816-212448!
+loading the cifar10 dataset...
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, none train samples (checksum=none), 10000 test samples (checksum=121.529)
+Model WIDE_RESNET50_2 with 66.84705 parameters loaded from epoch 0, step 390.
+Running evaluation for WIDE_RESNET50_2 with 66.85M parameters...
+
+testing: top1=26.28, top5=77.61 (10000 eval samples, time=4.30 seconds)
+
+testing: top1=26.280, top5=77.610 (10000 eval samples, time=4.47 seconds)
+
+
+Environment:
+git commit          : 75d5573
+hostname            : clx-a-01.rc.rit.edu
+torch               : 2.5.1
+torchvision         : 0.20.1
+cuda available      : True
+cudnn enabled       : True
+cuda version        : 12.4
+start time          : 20250816-212509
+
+Script Arguments (train_net mode):
+amp                 : False
+arch                : wide_resnet50_2
+auxiliary           : False
+auxiliary_weight    : 0.4
+batch_size          : 128
+bce                 : False
+beta                : 1e-05
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-4p-c45a103-1111/checkpoint.pt
+compile             : None
+cutout              : False
+cutout_length       : 16
+data_dir            : ./data
+dataset             : cifar10
+debug               : 0
+device              : cuda
+drop_path_prob      : 0
+epochs              : 1
+gamma               : 0.1
+grad_clip           : 5
+imsize              : 32
+init                : rand
+init_channels       : 36
+interm_epoch        : 5
+label_smooth        : 0.1
+layer               : 0
+layers              : 20
+log_interval        : 100
+lr                  : 0.025
+lr_steps            : [30, 60]
+momentum            : 0.9
+multigpu            : False
+n_shots             : None
+name                : tmp
+noise               : False
+num_workers         : 0
+opt                 : sgd
+pretrained          : False
+save_dir            : ./checkpoints
+scheduler           : None
+seed                : 1111
+split               : predefined
+test_batch_size     : 64
+timm_aug            : False
+val                 : False
+wd                  : 0.0001
+
+
+Experiment dir: ./checkpoints/tmp-75d5573-1111
+
+loading the CIFAR10 dataset...
+Files already downloaded and verified
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, 50000 train samples (checksum=120.708), 10000 test samples (checksum=121.529)
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-4p-c45a103-1111/checkpoint.pt...
+404 Client Error. (Request ID: Root=1-68a12f78-05b953841cbceee928fae19e;4a17b3d2-4968-433a-bc7d-1d1de50fec6a)
+
+Entry Not Found for url: https://huggingface.co/SamsungSAILMontreal/ghn3/resolve/main//shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-4p-c45a103-1111/checkpoint.pt. 
+Trying to load from local file...
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-4p-c45a103-1111/checkpoint.pt with 4531500 parameters is done!
+number of parameter tensors predicted using GHN: 161, total parameters predicted: 66847050 (MATCHED!), time to predict (on CPU): 0.2595 sec
+
+Starting training WIDE_RESNET50_2 with 66847050 parameters!
+
+epoch=001/001, lr=2.500000e-02
+batch=0001/0391 	 loss=3.7750	top1=39.8438	top5=94.5312 	 0.2981 (sec/batch), mem ram/gpu: 1.70/5.93 (G)
+batch=0100/0391 	 loss=4.3808	top1=18.1250	top5=67.2031 	 0.1192 (sec/batch), mem ram/gpu: 1.71/5.93 (G)
+batch=0200/0391 	 loss=3.7079	top1=19.0391	top5=68.2930 	 0.1175 (sec/batch), mem ram/gpu: 1.71/5.93 (G)
+batch=0300/0391 	 loss=3.3736	top1=19.4010	top5=69.0938 	 0.1176 (sec/batch), mem ram/gpu: 1.71/5.93 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=299
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+batch=0390/0391 	 loss=3.1487	top1=20.3846	top5=70.7853 	 0.1358 (sec/batch), mem ram/gpu: 1.72/5.93 (G)
+batch=0391/0391 	 loss=3.1474	top1=20.3820	top5=70.7840 	 0.1358 (sec/batch), mem ram/gpu: 1.73/5.93 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=390
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+done at 20250816-212619!
+loading the cifar10 dataset...
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, none train samples (checksum=none), 10000 test samples (checksum=121.529)
+Model WIDE_RESNET50_2 with 66.84705 parameters loaded from epoch 0, step 390.
+Running evaluation for WIDE_RESNET50_2 with 66.85M parameters...
+
+testing: top1=30.32, top5=77.78 (10000 eval samples, time=4.29 seconds)
+
+testing: top1=30.320, top5=77.780 (10000 eval samples, time=4.29 seconds)
+
+
+Environment:
+git commit          : 75d5573
+hostname            : clx-a-01.rc.rit.edu
+torch               : 2.5.1
+torchvision         : 0.20.1
+cuda available      : True
+cudnn enabled       : True
+cuda version        : 12.4
+start time          : 20250816-212634
+
+Script Arguments (train_net mode):
+amp                 : False
+arch                : wide_resnet50_2
+auxiliary           : False
+auxiliary_weight    : 0.4
+batch_size          : 128
+bce                 : False
+beta                : 1e-05
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-5p-c45a103-1111/checkpoint.pt
+compile             : None
+cutout              : False
+cutout_length       : 16
+data_dir            : ./data
+dataset             : cifar10
+debug               : 0
+device              : cuda
+drop_path_prob      : 0
+epochs              : 1
+gamma               : 0.1
+grad_clip           : 5
+imsize              : 32
+init                : rand
+init_channels       : 36
+interm_epoch        : 5
+label_smooth        : 0.1
+layer               : 0
+layers              : 20
+log_interval        : 100
+lr                  : 0.025
+lr_steps            : [30, 60]
+momentum            : 0.9
+multigpu            : False
+n_shots             : None
+name                : tmp
+noise               : False
+num_workers         : 0
+opt                 : sgd
+pretrained          : False
+save_dir            : ./checkpoints
+scheduler           : None
+seed                : 1111
+split               : predefined
+test_batch_size     : 64
+timm_aug            : False
+val                 : False
+wd                  : 0.0001
+
+
+Experiment dir: ./checkpoints/tmp-75d5573-1111
+
+loading the CIFAR10 dataset...
+Files already downloaded and verified
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, 50000 train samples (checksum=120.708), 10000 test samples (checksum=121.529)
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-5p-c45a103-1111/checkpoint.pt...
+404 Client Error. (Request ID: Root=1-68a12fcd-304e4f5d202177d5166566c2;cfdc76ad-20c8-460f-b351-98b8c19ce96c)
+
+Entry Not Found for url: https://huggingface.co/SamsungSAILMontreal/ghn3/resolve/main//shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-5p-c45a103-1111/checkpoint.pt. 
+Trying to load from local file...
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-5p-c45a103-1111/checkpoint.pt with 4531500 parameters is done!
+number of parameter tensors predicted using GHN: 161, total parameters predicted: 66847050 (MATCHED!), time to predict (on CPU): 0.2769 sec
+
+Starting training WIDE_RESNET50_2 with 66847050 parameters!
+
+epoch=001/001, lr=2.500000e-02
+batch=0001/0391 	 loss=4.1101	top1=38.2812	top5=93.7500 	 0.2974 (sec/batch), mem ram/gpu: 1.71/5.93 (G)
+batch=0100/0391 	 loss=4.1450	top1=19.0781	top5=69.6250 	 0.1215 (sec/batch), mem ram/gpu: 1.72/5.93 (G)
+batch=0200/0391 	 loss=4.0969	top1=20.8125	top5=70.5039 	 0.1453 (sec/batch), mem ram/gpu: 1.72/5.93 (G)
+batch=0300/0391 	 loss=4.0519	top1=21.4453	top5=71.3099 	 0.1354 (sec/batch), mem ram/gpu: 1.72/5.93 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=299
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+batch=0390/0391 	 loss=3.8960	top1=22.3297	top5=72.0553 	 0.1348 (sec/batch), mem ram/gpu: 1.72/5.93 (G)
+batch=0391/0391 	 loss=3.8947	top1=22.3400	top5=72.0560 	 0.1350 (sec/batch), mem ram/gpu: 1.73/5.93 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=390
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+done at 20250816-212743!
+loading the cifar10 dataset...
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, none train samples (checksum=none), 10000 test samples (checksum=121.529)
+Model WIDE_RESNET50_2 with 66.84705 parameters loaded from epoch 0, step 390.
+Running evaluation for WIDE_RESNET50_2 with 66.85M parameters...
+
+testing: top1=31.16, top5=82.38 (10000 eval samples, time=4.23 seconds)
+
+testing: top1=31.160, top5=82.380 (10000 eval samples, time=4.24 seconds)
+
+
+Environment:
+git commit          : 75d5573
+hostname            : clx-a-01.rc.rit.edu
+torch               : 2.5.1
+torchvision         : 0.20.1
+cuda available      : True
+cudnn enabled       : True
+cuda version        : 12.4
+start time          : 20250816-212758
+
+Script Arguments (train_net mode):
+amp                 : False
+arch                : wide_resnet50_2
+auxiliary           : False
+auxiliary_weight    : 0.4
+batch_size          : 128
+bce                 : False
+beta                : 1e-05
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-6p-c45a103-1111/checkpoint.pt
+compile             : None
+cutout              : False
+cutout_length       : 16
+data_dir            : ./data
+dataset             : cifar10
+debug               : 0
+device              : cuda
+drop_path_prob      : 0
+epochs              : 1
+gamma               : 0.1
+grad_clip           : 5
+imsize              : 32
+init                : rand
+init_channels       : 36
+interm_epoch        : 5
+label_smooth        : 0.1
+layer               : 0
+layers              : 20
+log_interval        : 100
+lr                  : 0.025
+lr_steps            : [30, 60]
+momentum            : 0.9
+multigpu            : False
+n_shots             : None
+name                : tmp
+noise               : False
+num_workers         : 0
+opt                 : sgd
+pretrained          : False
+save_dir            : ./checkpoints
+scheduler           : None
+seed                : 1111
+split               : predefined
+test_batch_size     : 64
+timm_aug            : False
+val                 : False
+wd                  : 0.0001
+
+
+Experiment dir: ./checkpoints/tmp-75d5573-1111
+
+loading the CIFAR10 dataset...
+Files already downloaded and verified
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, 50000 train samples (checksum=120.708), 10000 test samples (checksum=121.529)
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-6p-c45a103-1111/checkpoint.pt...
+404 Client Error. (Request ID: Root=1-68a13021-17d217f62cbf6491107f61d6;f3dfc5a6-a9f2-47e5-86e0-d4591950550a)
+
+Entry Not Found for url: https://huggingface.co/SamsungSAILMontreal/ghn3/resolve/main//shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-6p-c45a103-1111/checkpoint.pt. 
+Trying to load from local file...
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-6p-c45a103-1111/checkpoint.pt with 4531500 parameters is done!
+number of parameter tensors predicted using GHN: 161, total parameters predicted: 66847050 (MATCHED!), time to predict (on CPU): 0.2711 sec
+
+Starting training WIDE_RESNET50_2 with 66847050 parameters!
+
+epoch=001/001, lr=2.500000e-02
+batch=0001/0391 	 loss=3.3281	top1=40.6250	top5=96.0938 	 0.2872 (sec/batch), mem ram/gpu: 1.71/5.93 (G)
+batch=0100/0391 	 loss=4.1584	top1=20.7266	top5=70.1172 	 0.1189 (sec/batch), mem ram/gpu: 1.73/5.93 (G)
+batch=0200/0391 	 loss=3.7406	top1=21.8750	top5=72.6055 	 0.1172 (sec/batch), mem ram/gpu: 1.73/5.93 (G)
+batch=0300/0391 	 loss=3.5194	top1=23.4661	top5=73.8255 	 0.1165 (sec/batch), mem ram/gpu: 1.73/5.93 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=299
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+batch=0390/0391 	 loss=3.2881	top1=24.8097	top5=75.1482 	 0.1197 (sec/batch), mem ram/gpu: 1.73/5.93 (G)
+batch=0391/0391 	 loss=3.2867	top1=24.8340	top5=75.1620 	 0.1198 (sec/batch), mem ram/gpu: 1.73/5.93 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=390
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+done at 20250816-212901!
+loading the cifar10 dataset...
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, none train samples (checksum=none), 10000 test samples (checksum=121.529)
+Model WIDE_RESNET50_2 with 66.84705 parameters loaded from epoch 0, step 390.
+Running evaluation for WIDE_RESNET50_2 with 66.85M parameters...
+
+testing: top1=32.78, top5=85.01 (10000 eval samples, time=4.48 seconds)
+
+testing: top1=32.780, top5=85.010 (10000 eval samples, time=4.55 seconds)
+
+
+Environment:
+git commit          : 75d5573
+hostname            : clx-a-01.rc.rit.edu
+torch               : 2.5.1
+torchvision         : 0.20.1
+cuda available      : True
+cudnn enabled       : True
+cuda version        : 12.4
+start time          : 20250816-212916
+
+Script Arguments (train_net mode):
+amp                 : False
+arch                : wide_resnet50_2
+auxiliary           : False
+auxiliary_weight    : 0.4
+batch_size          : 128
+bce                 : False
+beta                : 1e-05
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-7p-c45a103-1111/checkpoint.pt
+compile             : None
+cutout              : False
+cutout_length       : 16
+data_dir            : ./data
+dataset             : cifar10
+debug               : 0
+device              : cuda
+drop_path_prob      : 0
+epochs              : 1
+gamma               : 0.1
+grad_clip           : 5
+imsize              : 32
+init                : rand
+init_channels       : 36
+interm_epoch        : 5
+label_smooth        : 0.1
+layer               : 0
+layers              : 20
+log_interval        : 100
+lr                  : 0.025
+lr_steps            : [30, 60]
+momentum            : 0.9
+multigpu            : False
+n_shots             : None
+name                : tmp
+noise               : False
+num_workers         : 0
+opt                 : sgd
+pretrained          : False
+save_dir            : ./checkpoints
+scheduler           : None
+seed                : 1111
+split               : predefined
+test_batch_size     : 64
+timm_aug            : False
+val                 : False
+wd                  : 0.0001
+
+
+Experiment dir: ./checkpoints/tmp-75d5573-1111
+
+loading the CIFAR10 dataset...
+Files already downloaded and verified
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, 50000 train samples (checksum=120.708), 10000 test samples (checksum=121.529)
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-7p-c45a103-1111/checkpoint.pt...
+404 Client Error. (Request ID: Root=1-68a1306f-5e0634bf173c82ea259b837b;4e7c08f2-dc80-4021-bbe3-54604d6062fc)
+
+Entry Not Found for url: https://huggingface.co/SamsungSAILMontreal/ghn3/resolve/main//shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-7p-c45a103-1111/checkpoint.pt. 
+Trying to load from local file...
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-7p-c45a103-1111/checkpoint.pt with 4531500 parameters is done!
+number of parameter tensors predicted using GHN: 161, total parameters predicted: 66847050 (MATCHED!), time to predict (on CPU): 0.2722 sec
+
+Starting training WIDE_RESNET50_2 with 66847050 parameters!
+
+epoch=001/001, lr=2.500000e-02
+batch=0001/0391 	 loss=3.6607	top1=42.1875	top5=96.0938 	 0.2873 (sec/batch), mem ram/gpu: 1.71/5.93 (G)
+batch=0100/0391 	 loss=4.3467	top1=20.1328	top5=70.3516 	 0.1199 (sec/batch), mem ram/gpu: 1.72/5.93 (G)
+batch=0200/0391 	 loss=3.9840	top1=20.8555	top5=70.7578 	 0.1178 (sec/batch), mem ram/gpu: 1.72/5.93 (G)
+batch=0300/0391 	 loss=3.6884	top1=22.0156	top5=71.7135 	 0.1170 (sec/batch), mem ram/gpu: 1.72/5.93 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=299
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+batch=0390/0391 	 loss=3.4482	top1=22.9307	top5=72.9447 	 0.1201 (sec/batch), mem ram/gpu: 1.73/5.93 (G)
+batch=0391/0391 	 loss=3.4459	top1=22.9600	top5=72.9620 	 0.1204 (sec/batch), mem ram/gpu: 1.74/5.93 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=390
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+done at 20250816-213019!
+loading the cifar10 dataset...
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, none train samples (checksum=none), 10000 test samples (checksum=121.529)
+Model WIDE_RESNET50_2 with 66.84705 parameters loaded from epoch 0, step 390.
+Running evaluation for WIDE_RESNET50_2 with 66.85M parameters...
+
+testing: top1=26.05, top5=79.53 (10000 eval samples, time=4.29 seconds)
+
+testing: top1=26.050, top5=79.530 (10000 eval samples, time=4.30 seconds)
+
+
+Environment:
+git commit          : 75d5573
+hostname            : clx-a-01.rc.rit.edu
+torch               : 2.5.1
+torchvision         : 0.20.1
+cuda available      : True
+cudnn enabled       : True
+cuda version        : 12.4
+start time          : 20250816-213034
+
+Script Arguments (train_net mode):
+amp                 : False
+arch                : wide_resnet50_2
+auxiliary           : False
+auxiliary_weight    : 0.4
+batch_size          : 128
+bce                 : False
+beta                : 1e-05
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-8p-c45a103-1111/checkpoint.pt
+compile             : None
+cutout              : False
+cutout_length       : 16
+data_dir            : ./data
+dataset             : cifar10
+debug               : 0
+device              : cuda
+drop_path_prob      : 0
+epochs              : 1
+gamma               : 0.1
+grad_clip           : 5
+imsize              : 32
+init                : rand
+init_channels       : 36
+interm_epoch        : 5
+label_smooth        : 0.1
+layer               : 0
+layers              : 20
+log_interval        : 100
+lr                  : 0.025
+lr_steps            : [30, 60]
+momentum            : 0.9
+multigpu            : False
+n_shots             : None
+name                : tmp
+noise               : False
+num_workers         : 0
+opt                 : sgd
+pretrained          : False
+save_dir            : ./checkpoints
+scheduler           : None
+seed                : 1111
+split               : predefined
+test_batch_size     : 64
+timm_aug            : False
+val                 : False
+wd                  : 0.0001
+
+
+Experiment dir: ./checkpoints/tmp-75d5573-1111
+
+loading the CIFAR10 dataset...
+Files already downloaded and verified
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, 50000 train samples (checksum=120.708), 10000 test samples (checksum=121.529)
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-8p-c45a103-1111/checkpoint.pt...
+404 Client Error. (Request ID: Root=1-68a130bd-4bd31f6f23116bdb0fce4fda;90e868ce-9188-48f1-b0c4-b726a58b8b95)
+
+Entry Not Found for url: https://huggingface.co/SamsungSAILMontreal/ghn3/resolve/main//shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-8p-c45a103-1111/checkpoint.pt. 
+Trying to load from local file...
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-8p-c45a103-1111/checkpoint.pt with 4531500 parameters is done!
+number of parameter tensors predicted using GHN: 161, total parameters predicted: 66847050 (MATCHED!), time to predict (on CPU): 0.2688 sec
+
+Starting training WIDE_RESNET50_2 with 66847050 parameters!
+
+epoch=001/001, lr=2.500000e-02
+batch=0001/0391 	 loss=3.6781	top1=47.6562	top5=96.0938 	 0.3034 (sec/batch), mem ram/gpu: 1.68/5.93 (G)
+batch=0100/0391 	 loss=3.9990	top1=19.3203	top5=70.6562 	 0.1189 (sec/batch), mem ram/gpu: 1.69/5.93 (G)
+batch=0200/0391 	 loss=3.6930	top1=20.9766	top5=72.4648 	 0.1171 (sec/batch), mem ram/gpu: 1.69/5.93 (G)
+batch=0300/0391 	 loss=3.3720	top1=22.3906	top5=73.8958 	 0.1165 (sec/batch), mem ram/gpu: 1.69/5.93 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=299
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+batch=0390/0391 	 loss=3.1725	top1=23.4736	top5=74.6955 	 0.1204 (sec/batch), mem ram/gpu: 1.70/5.93 (G)
+batch=0391/0391 	 loss=3.1711	top1=23.4860	top5=74.7040 	 0.1204 (sec/batch), mem ram/gpu: 1.71/5.93 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=390
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+done at 20250816-213137!
+loading the cifar10 dataset...
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, none train samples (checksum=none), 10000 test samples (checksum=121.529)
+Model WIDE_RESNET50_2 with 66.84705 parameters loaded from epoch 0, step 390.
+Running evaluation for WIDE_RESNET50_2 with 66.85M parameters...
+
+testing: top1=25.96, top5=78.99 (10000 eval samples, time=4.26 seconds)
+
+testing: top1=25.960, top5=78.990 (10000 eval samples, time=4.35 seconds)
+
+
+Environment:
+git commit          : 75d5573
+hostname            : clx-a-01.rc.rit.edu
+torch               : 2.5.1
+torchvision         : 0.20.1
+cuda available      : True
+cudnn enabled       : True
+cuda version        : 12.4
+start time          : 20250816-213152
+
+Script Arguments (train_net mode):
+amp                 : False
+arch                : wide_resnet50_2
+auxiliary           : False
+auxiliary_weight    : 0.4
+batch_size          : 128
+bce                 : False
+beta                : 1e-05
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-9p-c45a103-1111/checkpoint.pt
+compile             : None
+cutout              : False
+cutout_length       : 16
+data_dir            : ./data
+dataset             : cifar10
+debug               : 0
+device              : cuda
+drop_path_prob      : 0
+epochs              : 1
+gamma               : 0.1
+grad_clip           : 5
+imsize              : 32
+init                : rand
+init_channels       : 36
+interm_epoch        : 5
+label_smooth        : 0.1
+layer               : 0
+layers              : 20
+log_interval        : 100
+lr                  : 0.025
+lr_steps            : [30, 60]
+momentum            : 0.9
+multigpu            : False
+n_shots             : None
+name                : tmp
+noise               : False
+num_workers         : 0
+opt                 : sgd
+pretrained          : False
+save_dir            : ./checkpoints
+scheduler           : None
+seed                : 1111
+split               : predefined
+test_batch_size     : 64
+timm_aug            : False
+val                 : False
+wd                  : 0.0001
+
+
+Experiment dir: ./checkpoints/tmp-75d5573-1111
+
+loading the CIFAR10 dataset...
+Files already downloaded and verified
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, 50000 train samples (checksum=120.708), 10000 test samples (checksum=121.529)
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-9p-c45a103-1111/checkpoint.pt...
+404 Client Error. (Request ID: Root=1-68a1310b-66947783724ff3de2688e410;544d0a3d-64cd-4ab2-872f-46f81a324446)
+
+Entry Not Found for url: https://huggingface.co/SamsungSAILMontreal/ghn3/resolve/main//shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-9p-c45a103-1111/checkpoint.pt. 
+Trying to load from local file...
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-9p-c45a103-1111/checkpoint.pt with 4531500 parameters is done!
+number of parameter tensors predicted using GHN: 161, total parameters predicted: 66847050 (MATCHED!), time to predict (on CPU): 0.2682 sec
+
+Starting training WIDE_RESNET50_2 with 66847050 parameters!
+
+epoch=001/001, lr=2.500000e-02
+batch=0001/0391 	 loss=4.2865	top1=39.8438	top5=93.7500 	 0.2908 (sec/batch), mem ram/gpu: 1.70/5.93 (G)
+batch=0100/0391 	 loss=3.8334	top1=22.0078	top5=71.7500 	 0.1205 (sec/batch), mem ram/gpu: 1.72/5.93 (G)
+batch=0200/0391 	 loss=3.5900	top1=24.4102	top5=73.5781 	 0.1186 (sec/batch), mem ram/gpu: 1.72/5.93 (G)
+batch=0300/0391 	 loss=3.3580	top1=26.2995	top5=75.2969 	 0.1179 (sec/batch), mem ram/gpu: 1.72/5.93 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=299
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+batch=0390/0391 	 loss=3.2187	top1=27.3698	top5=76.1058 	 0.1218 (sec/batch), mem ram/gpu: 1.72/5.93 (G)
+batch=0391/0391 	 loss=3.2186	top1=27.3600	top5=76.0900 	 0.1224 (sec/batch), mem ram/gpu: 1.72/5.93 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=390
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+done at 20250816-213256!
+loading the cifar10 dataset...
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, none train samples (checksum=none), 10000 test samples (checksum=121.529)
+Model WIDE_RESNET50_2 with 66.84705 parameters loaded from epoch 0, step 390.
+Running evaluation for WIDE_RESNET50_2 with 66.85M parameters...
+
+testing: top1=35.06, top5=77.47 (10000 eval samples, time=4.25 seconds)
+
+testing: top1=35.060, top5=77.470 (10000 eval samples, time=4.35 seconds)
+
+
+Environment:
+git commit          : 75d5573
+hostname            : clx-a-01.rc.rit.edu
+torch               : 2.5.1
+torchvision         : 0.20.1
+cuda available      : True
+cudnn enabled       : True
+cuda version        : 12.4
+start time          : 20250816-213312
+
+Script Arguments (train_net mode):
+amp                 : False
+arch                : wide_resnet50_2
+auxiliary           : False
+auxiliary_weight    : 0.4
+batch_size          : 128
+bce                 : False
+beta                : 1e-05
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-10p-b3289ac-1111/checkpoint.pt
+compile             : None
+cutout              : False
+cutout_length       : 16
+data_dir            : ./data
+dataset             : cifar10
+debug               : 0
+device              : cuda
+drop_path_prob      : 0
+epochs              : 1
+gamma               : 0.1
+grad_clip           : 5
+imsize              : 32
+init                : rand
+init_channels       : 36
+interm_epoch        : 5
+label_smooth        : 0.1
+layer               : 0
+layers              : 20
+log_interval        : 100
+lr                  : 0.025
+lr_steps            : [30, 60]
+momentum            : 0.9
+multigpu            : False
+n_shots             : None
+name                : tmp
+noise               : False
+num_workers         : 0
+opt                 : sgd
+pretrained          : False
+save_dir            : ./checkpoints
+scheduler           : None
+seed                : 1111
+split               : predefined
+test_batch_size     : 64
+timm_aug            : False
+val                 : False
+wd                  : 0.0001
+
+
+Experiment dir: ./checkpoints/tmp-75d5573-1111
+
+loading the CIFAR10 dataset...
+Files already downloaded and verified
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, 50000 train samples (checksum=120.708), 10000 test samples (checksum=121.529)
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-10p-b3289ac-1111/checkpoint.pt...
+404 Client Error. (Request ID: Root=1-68a1315b-3a2c92ed36bc828c354bfecd;9d898c68-9aca-439f-8eae-af28c5e51c1e)
+
+Entry Not Found for url: https://huggingface.co/SamsungSAILMontreal/ghn3/resolve/main//shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-10p-b3289ac-1111/checkpoint.pt. 
+Trying to load from local file...
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-10p-b3289ac-1111/checkpoint.pt with 4531500 parameters is done!
+number of parameter tensors predicted using GHN: 161, total parameters predicted: 66847050 (MATCHED!), time to predict (on CPU): 0.2676 sec
+
+Starting training WIDE_RESNET50_2 with 66847050 parameters!
+
+epoch=001/001, lr=2.500000e-02
+batch=0001/0391 	 loss=4.0838	top1=40.6250	top5=91.4062 	 0.2932 (sec/batch), mem ram/gpu: 1.69/5.93 (G)
+batch=0100/0391 	 loss=3.9935	top1=19.4219	top5=69.2500 	 0.1195 (sec/batch), mem ram/gpu: 1.71/5.93 (G)
+batch=0200/0391 	 loss=3.8930	top1=20.9648	top5=70.8594 	 0.1177 (sec/batch), mem ram/gpu: 1.71/5.93 (G)
+batch=0300/0391 	 loss=3.6704	top1=22.6172	top5=71.9036 	 0.1172 (sec/batch), mem ram/gpu: 1.71/5.93 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=299
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+batch=0390/0391 	 loss=3.4969	top1=23.5196	top5=73.2412 	 0.1509 (sec/batch), mem ram/gpu: 1.71/5.93 (G)
+batch=0391/0391 	 loss=3.4950	top1=23.5340	top5=73.2560 	 0.1512 (sec/batch), mem ram/gpu: 1.72/5.93 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=390
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+done at 20250816-213427!
+loading the cifar10 dataset...
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, none train samples (checksum=none), 10000 test samples (checksum=121.529)
+Model WIDE_RESNET50_2 with 66.84705 parameters loaded from epoch 0, step 390.
+Running evaluation for WIDE_RESNET50_2 with 66.85M parameters...
+
+testing: top1=35.07, top5=80.79 (10000 eval samples, time=4.24 seconds)
+
+testing: top1=35.070, top5=80.790 (10000 eval samples, time=4.29 seconds)
+
+
+Environment:
+git commit          : 75d5573
+hostname            : clx-a-01.rc.rit.edu
+torch               : 2.5.1
+torchvision         : 0.20.1
+cuda available      : True
+cudnn enabled       : True
+cuda version        : 12.4
+start time          : 20250816-213442
+
+Script Arguments (train_net mode):
+amp                 : False
+arch                : wide_resnet50_2
+auxiliary           : False
+auxiliary_weight    : 0.4
+batch_size          : 128
+bce                 : False
+beta                : 1e-05
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-20p-b3289ac-1111/checkpoint.pt
+compile             : None
+cutout              : False
+cutout_length       : 16
+data_dir            : ./data
+dataset             : cifar10
+debug               : 0
+device              : cuda
+drop_path_prob      : 0
+epochs              : 1
+gamma               : 0.1
+grad_clip           : 5
+imsize              : 32
+init                : rand
+init_channels       : 36
+interm_epoch        : 5
+label_smooth        : 0.1
+layer               : 0
+layers              : 20
+log_interval        : 100
+lr                  : 0.025
+lr_steps            : [30, 60]
+momentum            : 0.9
+multigpu            : False
+n_shots             : None
+name                : tmp
+noise               : False
+num_workers         : 0
+opt                 : sgd
+pretrained          : False
+save_dir            : ./checkpoints
+scheduler           : None
+seed                : 1111
+split               : predefined
+test_batch_size     : 64
+timm_aug            : False
+val                 : False
+wd                  : 0.0001
+
+
+Experiment dir: ./checkpoints/tmp-75d5573-1111
+
+loading the CIFAR10 dataset...
+Files already downloaded and verified
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, 50000 train samples (checksum=120.708), 10000 test samples (checksum=121.529)
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-20p-b3289ac-1111/checkpoint.pt...
+404 Client Error. (Request ID: Root=1-68a131b5-47b2f3c32111b3102670551e;48599869-9d28-4b89-bde4-4a379ca34bde)
+
+Entry Not Found for url: https://huggingface.co/SamsungSAILMontreal/ghn3/resolve/main//shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-20p-b3289ac-1111/checkpoint.pt. 
+Trying to load from local file...
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-20p-b3289ac-1111/checkpoint.pt with 4531500 parameters is done!
+number of parameter tensors predicted using GHN: 161, total parameters predicted: 66847050 (MATCHED!), time to predict (on CPU): 0.2761 sec
+
+Starting training WIDE_RESNET50_2 with 66847050 parameters!
+
+epoch=001/001, lr=2.500000e-02
+batch=0001/0391 	 loss=3.5542	top1=48.4375	top5=96.0938 	 0.2901 (sec/batch), mem ram/gpu: 1.70/5.93 (G)
+batch=0100/0391 	 loss=3.8450	top1=21.4844	top5=72.5703 	 0.1203 (sec/batch), mem ram/gpu: 1.71/5.93 (G)
+batch=0200/0391 	 loss=3.6661	top1=23.1680	top5=73.7227 	 0.1180 (sec/batch), mem ram/gpu: 1.71/5.93 (G)
+batch=0300/0391 	 loss=3.5059	top1=24.8177	top5=75.1667 	 0.1173 (sec/batch), mem ram/gpu: 1.71/5.93 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=299
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+batch=0390/0391 	 loss=3.3470	top1=26.4683	top5=76.1839 	 0.1223 (sec/batch), mem ram/gpu: 1.72/5.93 (G)
+batch=0391/0391 	 loss=3.3467	top1=26.4540	top5=76.2060 	 0.1223 (sec/batch), mem ram/gpu: 1.73/5.93 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=390
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+done at 20250816-213546!
+loading the cifar10 dataset...
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, none train samples (checksum=none), 10000 test samples (checksum=121.529)
+Model WIDE_RESNET50_2 with 66.84705 parameters loaded from epoch 0, step 390.
+Running evaluation for WIDE_RESNET50_2 with 66.85M parameters...
+
+testing: top1=37.14, top5=85.11 (10000 eval samples, time=4.30 seconds)
+
+testing: top1=37.140, top5=85.110 (10000 eval samples, time=4.37 seconds)
+
+
+Environment:
+git commit          : 75d5573
+hostname            : clx-a-01.rc.rit.edu
+torch               : 2.5.1
+torchvision         : 0.20.1
+cuda available      : True
+cudnn enabled       : True
+cuda version        : 12.4
+start time          : 20250816-213606
+
+Script Arguments (train_net mode):
+amp                 : False
+arch                : wide_resnet50_2
+auxiliary           : False
+auxiliary_weight    : 0.4
+batch_size          : 128
+bce                 : False
+beta                : 1e-05
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-30p-b3289ac-1111/checkpoint.pt
+compile             : None
+cutout              : False
+cutout_length       : 16
+data_dir            : ./data
+dataset             : cifar10
+debug               : 0
+device              : cuda
+drop_path_prob      : 0
+epochs              : 1
+gamma               : 0.1
+grad_clip           : 5
+imsize              : 32
+init                : rand
+init_channels       : 36
+interm_epoch        : 5
+label_smooth        : 0.1
+layer               : 0
+layers              : 20
+log_interval        : 100
+lr                  : 0.025
+lr_steps            : [30, 60]
+momentum            : 0.9
+multigpu            : False
+n_shots             : None
+name                : tmp
+noise               : False
+num_workers         : 0
+opt                 : sgd
+pretrained          : False
+save_dir            : ./checkpoints
+scheduler           : None
+seed                : 1111
+split               : predefined
+test_batch_size     : 64
+timm_aug            : False
+val                 : False
+wd                  : 0.0001
+
+
+Experiment dir: ./checkpoints/tmp-75d5573-1111
+
+loading the CIFAR10 dataset...
+Files already downloaded and verified
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, 50000 train samples (checksum=120.708), 10000 test samples (checksum=121.529)
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-30p-b3289ac-1111/checkpoint.pt...
+404 Client Error. (Request ID: Root=1-68a13209-44a5a9914f7495df46ce846b;84142457-59c4-496b-a148-05f693be5743)
+
+Entry Not Found for url: https://huggingface.co/SamsungSAILMontreal/ghn3/resolve/main//shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-30p-b3289ac-1111/checkpoint.pt. 
+Trying to load from local file...
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-30p-b3289ac-1111/checkpoint.pt with 4531500 parameters is done!
+number of parameter tensors predicted using GHN: 161, total parameters predicted: 66847050 (MATCHED!), time to predict (on CPU): 0.2736 sec
+
+Starting training WIDE_RESNET50_2 with 66847050 parameters!
+
+epoch=001/001, lr=2.500000e-02
+batch=0001/0391 	 loss=4.1991	top1=42.9688	top5=98.4375 	 0.2877 (sec/batch), mem ram/gpu: 1.70/5.93 (G)
+batch=0100/0391 	 loss=3.8589	top1=25.8750	top5=75.7734 	 0.1206 (sec/batch), mem ram/gpu: 1.71/5.93 (G)
+batch=0200/0391 	 loss=3.4447	top1=28.2734	top5=77.2969 	 0.1191 (sec/batch), mem ram/gpu: 1.71/5.93 (G)
+batch=0300/0391 	 loss=3.2746	top1=29.6510	top5=77.9922 	 0.1181 (sec/batch), mem ram/gpu: 1.71/5.93 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=299
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+batch=0390/0391 	 loss=3.1126	top1=30.3506	top5=78.6418 	 0.1207 (sec/batch), mem ram/gpu: 1.72/5.93 (G)
+batch=0391/0391 	 loss=3.1115	top1=30.3580	top5=78.6340 	 0.1208 (sec/batch), mem ram/gpu: 1.73/5.93 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=390
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+done at 20250816-213709!
+loading the cifar10 dataset...
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, none train samples (checksum=none), 10000 test samples (checksum=121.529)
+Model WIDE_RESNET50_2 with 66.84705 parameters loaded from epoch 0, step 390.
+Running evaluation for WIDE_RESNET50_2 with 66.85M parameters...
+
+testing: top1=39.30, top5=82.00 (10000 eval samples, time=4.32 seconds)
+
+testing: top1=39.300, top5=82.000 (10000 eval samples, time=4.34 seconds)
+
+
+Environment:
+git commit          : 75d5573
+hostname            : clx-a-01.rc.rit.edu
+torch               : 2.5.1
+torchvision         : 0.20.1
+cuda available      : True
+cudnn enabled       : True
+cuda version        : 12.4
+start time          : 20250816-213725
+
+Script Arguments (train_net mode):
+amp                 : False
+arch                : wide_resnet50_2
+auxiliary           : False
+auxiliary_weight    : 0.4
+batch_size          : 128
+bce                 : False
+beta                : 1e-05
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-40p-b3289ac-1111/checkpoint.pt
+compile             : None
+cutout              : False
+cutout_length       : 16
+data_dir            : ./data
+dataset             : cifar10
+debug               : 0
+device              : cuda
+drop_path_prob      : 0
+epochs              : 1
+gamma               : 0.1
+grad_clip           : 5
+imsize              : 32
+init                : rand
+init_channels       : 36
+interm_epoch        : 5
+label_smooth        : 0.1
+layer               : 0
+layers              : 20
+log_interval        : 100
+lr                  : 0.025
+lr_steps            : [30, 60]
+momentum            : 0.9
+multigpu            : False
+n_shots             : None
+name                : tmp
+noise               : False
+num_workers         : 0
+opt                 : sgd
+pretrained          : False
+save_dir            : ./checkpoints
+scheduler           : None
+seed                : 1111
+split               : predefined
+test_batch_size     : 64
+timm_aug            : False
+val                 : False
+wd                  : 0.0001
+
+
+Experiment dir: ./checkpoints/tmp-75d5573-1111
+
+loading the CIFAR10 dataset...
+Files already downloaded and verified
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, 50000 train samples (checksum=120.708), 10000 test samples (checksum=121.529)
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-40p-b3289ac-1111/checkpoint.pt...
+404 Client Error. (Request ID: Root=1-68a13258-2f78837c4157436e4b857253;1640a48a-d9fa-4389-948b-cf3868869f20)
+
+Entry Not Found for url: https://huggingface.co/SamsungSAILMontreal/ghn3/resolve/main//shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-40p-b3289ac-1111/checkpoint.pt. 
+Trying to load from local file...
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-40p-b3289ac-1111/checkpoint.pt with 4531500 parameters is done!
+number of parameter tensors predicted using GHN: 161, total parameters predicted: 66847050 (MATCHED!), time to predict (on CPU): 0.2658 sec
+
+Starting training WIDE_RESNET50_2 with 66847050 parameters!
+
+epoch=001/001, lr=2.500000e-02
+batch=0001/0391 	 loss=4.0208	top1=52.3438	top5=96.8750 	 0.3027 (sec/batch), mem ram/gpu: 1.69/5.93 (G)
+batch=0100/0391 	 loss=4.0068	top1=24.4062	top5=74.3906 	 0.1201 (sec/batch), mem ram/gpu: 1.71/5.93 (G)
+batch=0200/0391 	 loss=3.5123	top1=27.5664	top5=76.8750 	 0.1182 (sec/batch), mem ram/gpu: 1.71/5.93 (G)
+batch=0300/0391 	 loss=3.2291	top1=29.3854	top5=78.5234 	 0.1175 (sec/batch), mem ram/gpu: 1.71/5.93 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=299
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+batch=0390/0391 	 loss=3.0207	top1=30.9535	top5=80.0601 	 0.1204 (sec/batch), mem ram/gpu: 1.71/5.93 (G)
+batch=0391/0391 	 loss=3.0205	top1=30.9480	top5=80.0640 	 0.1205 (sec/batch), mem ram/gpu: 1.72/5.93 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=390
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+done at 20250816-213828!
+loading the cifar10 dataset...
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, none train samples (checksum=none), 10000 test samples (checksum=121.529)
+Model WIDE_RESNET50_2 with 66.84705 parameters loaded from epoch 0, step 390.
+Running evaluation for WIDE_RESNET50_2 with 66.85M parameters...
+
+testing: top1=39.41, top5=87.39 (10000 eval samples, time=4.28 seconds)
+
+testing: top1=39.410, top5=87.390 (10000 eval samples, time=4.38 seconds)
+
+
+Environment:
+git commit          : 75d5573
+hostname            : clx-a-01.rc.rit.edu
+torch               : 2.5.1
+torchvision         : 0.20.1
+cuda available      : True
+cudnn enabled       : True
+cuda version        : 12.4
+start time          : 20250816-213843
+
+Script Arguments (train_net mode):
+amp                 : False
+arch                : wide_resnet50_2
+auxiliary           : False
+auxiliary_weight    : 0.4
+batch_size          : 128
+bce                 : False
+beta                : 1e-05
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-50p-b3289ac-1111/checkpoint.pt
+compile             : None
+cutout              : False
+cutout_length       : 16
+data_dir            : ./data
+dataset             : cifar10
+debug               : 0
+device              : cuda
+drop_path_prob      : 0
+epochs              : 1
+gamma               : 0.1
+grad_clip           : 5
+imsize              : 32
+init                : rand
+init_channels       : 36
+interm_epoch        : 5
+label_smooth        : 0.1
+layer               : 0
+layers              : 20
+log_interval        : 100
+lr                  : 0.025
+lr_steps            : [30, 60]
+momentum            : 0.9
+multigpu            : False
+n_shots             : None
+name                : tmp
+noise               : False
+num_workers         : 0
+opt                 : sgd
+pretrained          : False
+save_dir            : ./checkpoints
+scheduler           : None
+seed                : 1111
+split               : predefined
+test_batch_size     : 64
+timm_aug            : False
+val                 : False
+wd                  : 0.0001
+
+
+Experiment dir: ./checkpoints/tmp-75d5573-1111
+
+loading the CIFAR10 dataset...
+Files already downloaded and verified
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, 50000 train samples (checksum=120.708), 10000 test samples (checksum=121.529)
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-50p-b3289ac-1111/checkpoint.pt...
+404 Client Error. (Request ID: Root=1-68a132a7-2b0128ca40c89de02b927440;2d93189f-72ef-4868-9e7a-a7ed9acccbeb)
+
+Entry Not Found for url: https://huggingface.co/SamsungSAILMontreal/ghn3/resolve/main//shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-50p-b3289ac-1111/checkpoint.pt. 
+Trying to load from local file...
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-50p-b3289ac-1111/checkpoint.pt with 4531500 parameters is done!
+number of parameter tensors predicted using GHN: 161, total parameters predicted: 66847050 (MATCHED!), time to predict (on CPU): 0.2801 sec
+
+Starting training WIDE_RESNET50_2 with 66847050 parameters!
+
+epoch=001/001, lr=2.500000e-02
+batch=0001/0391 	 loss=4.1985	top1=50.0000	top5=96.0938 	 0.2961 (sec/batch), mem ram/gpu: 1.71/5.93 (G)
+batch=0100/0391 	 loss=3.6191	top1=22.7656	top5=74.6719 	 0.1196 (sec/batch), mem ram/gpu: 1.72/5.93 (G)
+batch=0200/0391 	 loss=3.3016	top1=25.6914	top5=76.1953 	 0.1178 (sec/batch), mem ram/gpu: 1.72/5.93 (G)
+batch=0300/0391 	 loss=3.0344	top1=28.3385	top5=78.0703 	 0.1172 (sec/batch), mem ram/gpu: 1.72/5.93 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=299
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+batch=0390/0391 	 loss=2.8491	top1=30.1863	top5=79.5994 	 0.1203 (sec/batch), mem ram/gpu: 1.72/5.93 (G)
+batch=0391/0391 	 loss=2.8476	top1=30.2140	top5=79.6100 	 0.1203 (sec/batch), mem ram/gpu: 1.73/5.93 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=390
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+done at 20250816-213947!
+loading the cifar10 dataset...
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, none train samples (checksum=none), 10000 test samples (checksum=121.529)
+Model WIDE_RESNET50_2 with 66.84705 parameters loaded from epoch 0, step 390.
+Running evaluation for WIDE_RESNET50_2 with 66.85M parameters...
+
+testing: top1=41.49, top5=89.30 (10000 eval samples, time=4.29 seconds)
+
+testing: top1=41.490, top5=89.300 (10000 eval samples, time=4.39 seconds)
+
+
+Environment:
+git commit          : 75d5573
+hostname            : clx-a-01.rc.rit.edu
+torch               : 2.5.1
+torchvision         : 0.20.1
+cuda available      : True
+cudnn enabled       : True
+cuda version        : 12.4
+start time          : 20250816-214002
+
+Script Arguments (train_net mode):
+amp                 : False
+arch                : wide_resnet50_2
+auxiliary           : False
+auxiliary_weight    : 0.4
+batch_size          : 128
+bce                 : False
+beta                : 1e-05
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-60p-d442e08-1111/checkpoint.pt
+compile             : None
+cutout              : False
+cutout_length       : 16
+data_dir            : ./data
+dataset             : cifar10
+debug               : 0
+device              : cuda
+drop_path_prob      : 0
+epochs              : 1
+gamma               : 0.1
+grad_clip           : 5
+imsize              : 32
+init                : rand
+init_channels       : 36
+interm_epoch        : 5
+label_smooth        : 0.1
+layer               : 0
+layers              : 20
+log_interval        : 100
+lr                  : 0.025
+lr_steps            : [30, 60]
+momentum            : 0.9
+multigpu            : False
+n_shots             : None
+name                : tmp
+noise               : False
+num_workers         : 0
+opt                 : sgd
+pretrained          : False
+save_dir            : ./checkpoints
+scheduler           : None
+seed                : 1111
+split               : predefined
+test_batch_size     : 64
+timm_aug            : False
+val                 : False
+wd                  : 0.0001
+
+
+Experiment dir: ./checkpoints/tmp-75d5573-1111
+
+loading the CIFAR10 dataset...
+Files already downloaded and verified
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, 50000 train samples (checksum=120.708), 10000 test samples (checksum=121.529)
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-60p-d442e08-1111/checkpoint.pt...
+404 Client Error. (Request ID: Root=1-68a132f5-76e77a7675e5320416afa99d;1ea36d97-10f4-4475-b845-3b5be2129220)
+
+Entry Not Found for url: https://huggingface.co/SamsungSAILMontreal/ghn3/resolve/main//shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-60p-d442e08-1111/checkpoint.pt. 
+Trying to load from local file...
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-60p-d442e08-1111/checkpoint.pt with 4531500 parameters is done!
+number of parameter tensors predicted using GHN: 161, total parameters predicted: 66847050 (MATCHED!), time to predict (on CPU): 0.2714 sec
+
+Starting training WIDE_RESNET50_2 with 66847050 parameters!
+
+epoch=001/001, lr=2.500000e-02
+batch=0001/0391 	 loss=4.3425	top1=58.5938	top5=96.0938 	 0.2995 (sec/batch), mem ram/gpu: 1.70/5.93 (G)
+batch=0100/0391 	 loss=3.9336	top1=25.4844	top5=75.4688 	 0.1203 (sec/batch), mem ram/gpu: 1.71/5.93 (G)
+batch=0200/0391 	 loss=3.6240	top1=28.9648	top5=78.1758 	 0.1184 (sec/batch), mem ram/gpu: 1.71/5.93 (G)
+batch=0300/0391 	 loss=3.4051	top1=30.9948	top5=79.4740 	 0.1177 (sec/batch), mem ram/gpu: 1.71/5.93 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=299
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+batch=0390/0391 	 loss=3.2372	top1=32.7063	top5=80.1923 	 0.1207 (sec/batch), mem ram/gpu: 1.72/5.93 (G)
+batch=0391/0391 	 loss=3.2361	top1=32.7160	top5=80.1980 	 0.1208 (sec/batch), mem ram/gpu: 1.72/5.93 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=390
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+done at 20250816-214106!
+loading the cifar10 dataset...
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, none train samples (checksum=none), 10000 test samples (checksum=121.529)
+Model WIDE_RESNET50_2 with 66.84705 parameters loaded from epoch 0, step 390.
+Running evaluation for WIDE_RESNET50_2 with 66.85M parameters...
+
+testing: top1=43.39, top5=86.38 (10000 eval samples, time=4.31 seconds)
+
+testing: top1=43.390, top5=86.380 (10000 eval samples, time=4.32 seconds)
+
+
+Environment:
+git commit          : 75d5573
+hostname            : clx-a-01.rc.rit.edu
+torch               : 2.5.1
+torchvision         : 0.20.1
+cuda available      : True
+cudnn enabled       : True
+cuda version        : 12.4
+start time          : 20250816-214121
+
+Script Arguments (train_net mode):
+amp                 : False
+arch                : wide_resnet50_2
+auxiliary           : False
+auxiliary_weight    : 0.4
+batch_size          : 128
+bce                 : False
+beta                : 1e-05
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-70p-d442e08-1111/checkpoint.pt
+compile             : None
+cutout              : False
+cutout_length       : 16
+data_dir            : ./data
+dataset             : cifar10
+debug               : 0
+device              : cuda
+drop_path_prob      : 0
+epochs              : 1
+gamma               : 0.1
+grad_clip           : 5
+imsize              : 32
+init                : rand
+init_channels       : 36
+interm_epoch        : 5
+label_smooth        : 0.1
+layer               : 0
+layers              : 20
+log_interval        : 100
+lr                  : 0.025
+lr_steps            : [30, 60]
+momentum            : 0.9
+multigpu            : False
+n_shots             : None
+name                : tmp
+noise               : False
+num_workers         : 0
+opt                 : sgd
+pretrained          : False
+save_dir            : ./checkpoints
+scheduler           : None
+seed                : 1111
+split               : predefined
+test_batch_size     : 64
+timm_aug            : False
+val                 : False
+wd                  : 0.0001
+
+
+Experiment dir: ./checkpoints/tmp-75d5573-1111
+
+loading the CIFAR10 dataset...
+Files already downloaded and verified
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, 50000 train samples (checksum=120.708), 10000 test samples (checksum=121.529)
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-70p-d442e08-1111/checkpoint.pt...
+404 Client Error. (Request ID: Root=1-68a13344-0aaa38630a898a924ba173aa;4b398223-1455-4e6f-af6d-6d0b7796d40a)
+
+Entry Not Found for url: https://huggingface.co/SamsungSAILMontreal/ghn3/resolve/main//shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-70p-d442e08-1111/checkpoint.pt. 
+Trying to load from local file...
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-70p-d442e08-1111/checkpoint.pt with 4531500 parameters is done!
+number of parameter tensors predicted using GHN: 161, total parameters predicted: 66847050 (MATCHED!), time to predict (on CPU): 0.2628 sec
+
+Starting training WIDE_RESNET50_2 with 66847050 parameters!
+
+epoch=001/001, lr=2.500000e-02
+batch=0001/0391 	 loss=3.6164	top1=56.2500	top5=96.0938 	 0.3050 (sec/batch), mem ram/gpu: 1.67/5.93 (G)
+batch=0100/0391 	 loss=3.4916	top1=27.8047	top5=77.3359 	 0.1195 (sec/batch), mem ram/gpu: 1.69/5.93 (G)
+batch=0200/0391 	 loss=3.3851	top1=30.0547	top5=78.4688 	 0.1179 (sec/batch), mem ram/gpu: 1.69/5.93 (G)
+batch=0300/0391 	 loss=3.2360	top1=32.1224	top5=79.6302 	 0.1172 (sec/batch), mem ram/gpu: 1.69/5.93 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=299
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+batch=0390/0391 	 loss=3.0700	top1=33.9784	top5=80.5849 	 0.1200 (sec/batch), mem ram/gpu: 1.70/5.93 (G)
+batch=0391/0391 	 loss=3.0688	top1=34.0020	top5=80.5920 	 0.1200 (sec/batch), mem ram/gpu: 1.70/5.93 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=390
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+done at 20250816-214223!
+loading the cifar10 dataset...
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, none train samples (checksum=none), 10000 test samples (checksum=121.529)
+Model WIDE_RESNET50_2 with 66.84705 parameters loaded from epoch 0, step 390.
+Running evaluation for WIDE_RESNET50_2 with 66.85M parameters...
+
+testing: top1=36.68, top5=80.58 (10000 eval samples, time=4.27 seconds)
+
+testing: top1=36.680, top5=80.580 (10000 eval samples, time=4.28 seconds)
+
+
+Environment:
+git commit          : 75d5573
+hostname            : clx-a-01.rc.rit.edu
+torch               : 2.5.1
+torchvision         : 0.20.1
+cuda available      : True
+cudnn enabled       : True
+cuda version        : 12.4
+start time          : 20250816-214238
+
+Script Arguments (train_net mode):
+amp                 : False
+arch                : wide_resnet50_2
+auxiliary           : False
+auxiliary_weight    : 0.4
+batch_size          : 128
+bce                 : False
+beta                : 1e-05
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-80p-d442e08-1111/checkpoint.pt
+compile             : None
+cutout              : False
+cutout_length       : 16
+data_dir            : ./data
+dataset             : cifar10
+debug               : 0
+device              : cuda
+drop_path_prob      : 0
+epochs              : 1
+gamma               : 0.1
+grad_clip           : 5
+imsize              : 32
+init                : rand
+init_channels       : 36
+interm_epoch        : 5
+label_smooth        : 0.1
+layer               : 0
+layers              : 20
+log_interval        : 100
+lr                  : 0.025
+lr_steps            : [30, 60]
+momentum            : 0.9
+multigpu            : False
+n_shots             : None
+name                : tmp
+noise               : False
+num_workers         : 0
+opt                 : sgd
+pretrained          : False
+save_dir            : ./checkpoints
+scheduler           : None
+seed                : 1111
+split               : predefined
+test_batch_size     : 64
+timm_aug            : False
+val                 : False
+wd                  : 0.0001
+
+
+Experiment dir: ./checkpoints/tmp-75d5573-1111
+
+loading the CIFAR10 dataset...
+Files already downloaded and verified
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, 50000 train samples (checksum=120.708), 10000 test samples (checksum=121.529)
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-80p-d442e08-1111/checkpoint.pt...
+404 Client Error. (Request ID: Root=1-68a13391-7888f0b919da21e72f351095;12e5dcee-83f5-42d4-b97c-dbd7c803ff3a)
+
+Entry Not Found for url: https://huggingface.co/SamsungSAILMontreal/ghn3/resolve/main//shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-80p-d442e08-1111/checkpoint.pt. 
+Trying to load from local file...
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-80p-d442e08-1111/checkpoint.pt with 4531500 parameters is done!
+number of parameter tensors predicted using GHN: 161, total parameters predicted: 66847050 (MATCHED!), time to predict (on CPU): 0.2744 sec
+
+Starting training WIDE_RESNET50_2 with 66847050 parameters!
+
+epoch=001/001, lr=2.500000e-02
+batch=0001/0391 	 loss=3.6915	top1=55.4688	top5=95.3125 	 0.3036 (sec/batch), mem ram/gpu: 1.67/5.93 (G)
+batch=0100/0391 	 loss=3.7018	top1=23.6953	top5=73.9844 	 0.1192 (sec/batch), mem ram/gpu: 1.69/5.93 (G)
+batch=0200/0391 	 loss=3.3918	top1=27.0977	top5=76.9141 	 0.1174 (sec/batch), mem ram/gpu: 1.69/5.93 (G)
+batch=0300/0391 	 loss=3.1598	top1=29.6484	top5=78.8932 	 0.1167 (sec/batch), mem ram/gpu: 1.69/5.93 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=299
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+batch=0390/0391 	 loss=3.0065	top1=31.6847	top5=80.0801 	 0.1195 (sec/batch), mem ram/gpu: 1.70/5.93 (G)
+batch=0391/0391 	 loss=3.0056	top1=31.7160	top5=80.0820 	 0.1194 (sec/batch), mem ram/gpu: 1.70/5.93 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=390
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+done at 20250816-214341!
+loading the cifar10 dataset...
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, none train samples (checksum=none), 10000 test samples (checksum=121.529)
+Model WIDE_RESNET50_2 with 66.84705 parameters loaded from epoch 0, step 390.
+Running evaluation for WIDE_RESNET50_2 with 66.85M parameters...
+
+testing: top1=37.73, top5=78.63 (10000 eval samples, time=4.24 seconds)
+
+testing: top1=37.730, top5=78.630 (10000 eval samples, time=4.24 seconds)
+
+
+Environment:
+git commit          : 75d5573
+hostname            : clx-a-01.rc.rit.edu
+torch               : 2.5.1
+torchvision         : 0.20.1
+cuda available      : True
+cudnn enabled       : True
+cuda version        : 12.4
+start time          : 20250816-214356
+
+Script Arguments (train_net mode):
+amp                 : False
+arch                : wide_resnet50_2
+auxiliary           : False
+auxiliary_weight    : 0.4
+batch_size          : 128
+bce                 : False
+beta                : 1e-05
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-90p-d442e08-1111/checkpoint.pt
+compile             : None
+cutout              : False
+cutout_length       : 16
+data_dir            : ./data
+dataset             : cifar10
+debug               : 0
+device              : cuda
+drop_path_prob      : 0
+epochs              : 1
+gamma               : 0.1
+grad_clip           : 5
+imsize              : 32
+init                : rand
+init_channels       : 36
+interm_epoch        : 5
+label_smooth        : 0.1
+layer               : 0
+layers              : 20
+log_interval        : 100
+lr                  : 0.025
+lr_steps            : [30, 60]
+momentum            : 0.9
+multigpu            : False
+n_shots             : None
+name                : tmp
+noise               : False
+num_workers         : 0
+opt                 : sgd
+pretrained          : False
+save_dir            : ./checkpoints
+scheduler           : None
+seed                : 1111
+split               : predefined
+test_batch_size     : 64
+timm_aug            : False
+val                 : False
+wd                  : 0.0001
+
+
+Experiment dir: ./checkpoints/tmp-75d5573-1111
+
+loading the CIFAR10 dataset...
+Files already downloaded and verified
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, 50000 train samples (checksum=120.708), 10000 test samples (checksum=121.529)
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-90p-d442e08-1111/checkpoint.pt...
+404 Client Error. (Request ID: Root=1-68a133df-0fabf299529217722b9e18ba;c9c59998-0eb6-40cd-b2f2-7715776f67c3)
+
+Entry Not Found for url: https://huggingface.co/SamsungSAILMontreal/ghn3/resolve/main//shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-90p-d442e08-1111/checkpoint.pt. 
+Trying to load from local file...
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-90p-d442e08-1111/checkpoint.pt with 4531500 parameters is done!
+number of parameter tensors predicted using GHN: 161, total parameters predicted: 66847050 (MATCHED!), time to predict (on CPU): 0.2604 sec
+
+Starting training WIDE_RESNET50_2 with 66847050 parameters!
+
+epoch=001/001, lr=2.500000e-02
+batch=0001/0391 	 loss=4.3710	top1=48.4375	top5=90.6250 	 0.3060 (sec/batch), mem ram/gpu: 1.68/5.93 (G)
+batch=0100/0391 	 loss=4.0223	top1=26.3281	top5=75.3203 	 0.1192 (sec/batch), mem ram/gpu: 1.69/5.93 (G)
+batch=0200/0391 	 loss=3.4186	top1=30.0586	top5=78.3984 	 0.1172 (sec/batch), mem ram/gpu: 1.69/5.93 (G)
+batch=0300/0391 	 loss=3.1713	top1=32.5130	top5=79.8646 	 0.1166 (sec/batch), mem ram/gpu: 1.69/5.93 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=299
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+batch=0390/0391 	 loss=3.0008	top1=33.8882	top5=80.8474 	 0.1195 (sec/batch), mem ram/gpu: 1.70/5.93 (G)
+batch=0391/0391 	 loss=3.0009	top1=33.8760	top5=80.8620 	 0.1194 (sec/batch), mem ram/gpu: 1.71/5.93 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=390
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+done at 20250816-214458!
+loading the cifar10 dataset...
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, none train samples (checksum=none), 10000 test samples (checksum=121.529)
+Model WIDE_RESNET50_2 with 66.84705 parameters loaded from epoch 0, step 390.
+Running evaluation for WIDE_RESNET50_2 with 66.85M parameters...
+
+testing: top1=25.76, top5=79.05 (10000 eval samples, time=4.21 seconds)
+
+testing: top1=25.760, top5=79.050 (10000 eval samples, time=4.21 seconds)
+
+
+Environment:
+git commit          : 75d5573
+hostname            : clx-a-01.rc.rit.edu
+torch               : 2.5.1
+torchvision         : 0.20.1
+cuda available      : True
+cudnn enabled       : True
+cuda version        : 12.4
+start time          : 20250816-214519
+
+Script Arguments (train_net mode):
+amp                 : False
+arch                : wide_resnet50_2
+auxiliary           : False
+auxiliary_weight    : 0.4
+batch_size          : 128
+bce                 : False
+beta                : 1e-05
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-b3289ac-1111/checkpoint.pt
+compile             : None
+cutout              : False
+cutout_length       : 16
+data_dir            : ./data
+dataset             : cifar10
+debug               : 0
+device              : cuda
+drop_path_prob      : 0
+epochs              : 1
+gamma               : 0.1
+grad_clip           : 5
+imsize              : 32
+init                : rand
+init_channels       : 36
+interm_epoch        : 5
+label_smooth        : 0.1
+layer               : 0
+layers              : 20
+log_interval        : 100
+lr                  : 0.025
+lr_steps            : [30, 60]
+momentum            : 0.9
+multigpu            : False
+n_shots             : None
+name                : tmp
+noise               : False
+num_workers         : 0
+opt                 : sgd
+pretrained          : False
+save_dir            : ./checkpoints
+scheduler           : None
+seed                : 1111
+split               : predefined
+test_batch_size     : 64
+timm_aug            : False
+val                 : False
+wd                  : 0.0001
+
+
+Experiment dir: ./checkpoints/tmp-75d5573-1111
+
+loading the CIFAR10 dataset...
+Files already downloaded and verified
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, 50000 train samples (checksum=120.708), 10000 test samples (checksum=121.529)
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-b3289ac-1111/checkpoint.pt...
+404 Client Error. (Request ID: Root=1-68a13432-73d7ae866d3dff72757db616;56fce966-152c-4661-baf1-589bfca68f02)
+
+Entry Not Found for url: https://huggingface.co/SamsungSAILMontreal/ghn3/resolve/main//shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-b3289ac-1111/checkpoint.pt. 
+Trying to load from local file...
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-b3289ac-1111/checkpoint.pt with 4531500 parameters is done!
+number of parameter tensors predicted using GHN: 161, total parameters predicted: 66847050 (MATCHED!), time to predict (on CPU): 0.2788 sec
+
+Starting training WIDE_RESNET50_2 with 66847050 parameters!
+
+epoch=001/001, lr=2.500000e-02
+batch=0001/0391 	 loss=3.1729	top1=55.4688	top5=96.0938 	 0.3048 (sec/batch), mem ram/gpu: 1.68/5.93 (G)
+batch=0100/0391 	 loss=3.7778	top1=24.5547	top5=74.6797 	 0.1197 (sec/batch), mem ram/gpu: 1.69/5.93 (G)
+batch=0200/0391 	 loss=3.4942	top1=27.9688	top5=77.3125 	 0.1176 (sec/batch), mem ram/gpu: 1.69/5.93 (G)
+batch=0300/0391 	 loss=3.2881	top1=30.1745	top5=78.4635 	 0.1170 (sec/batch), mem ram/gpu: 1.69/5.93 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=299
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+batch=0390/0391 	 loss=3.0669	top1=32.3858	top5=79.9399 	 0.1199 (sec/batch), mem ram/gpu: 1.69/5.93 (G)
+batch=0391/0391 	 loss=3.0661	top1=32.4000	top5=79.9460 	 0.1199 (sec/batch), mem ram/gpu: 1.70/5.93 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=390
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+done at 20250816-214621!
+loading the cifar10 dataset...
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, none train samples (checksum=none), 10000 test samples (checksum=121.529)
+Model WIDE_RESNET50_2 with 66.84705 parameters loaded from epoch 0, step 390.
+Running evaluation for WIDE_RESNET50_2 with 66.85M parameters...
+
+testing: top1=43.28, top5=86.09 (10000 eval samples, time=4.22 seconds)
+
+testing: top1=43.280, top5=86.090 (10000 eval samples, time=4.22 seconds)

@@ -1,0 +1,1900 @@
+
+
+Environment:
+git commit          : 75d5573
+hostname            : clx-a-02.rc.rit.edu
+torch               : 2.5.1
+torchvision         : 0.20.1
+cuda available      : True
+cudnn enabled       : True
+cuda version        : 12.4
+start time          : 20250816-103011
+
+Script Arguments (train_net mode):
+amp                 : False
+arch                : resnext50_32x4d
+auxiliary           : False
+auxiliary_weight    : 0.4
+batch_size          : 128
+bce                 : False
+beta                : 1e-05
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-1p-c45a103-1111/checkpoint.pt
+compile             : None
+cutout              : False
+cutout_length       : 16
+data_dir            : ./data
+dataset             : cifar10
+debug               : 0
+device              : cuda
+drop_path_prob      : 0
+epochs              : 1
+gamma               : 0.1
+grad_clip           : 5
+imsize              : 32
+init                : rand
+init_channels       : 36
+interm_epoch        : 5
+label_smooth        : 0.1
+layer               : 0
+layers              : 20
+log_interval        : 100
+lr                  : 0.025
+lr_steps            : [30, 60]
+momentum            : 0.9
+multigpu            : False
+n_shots             : None
+name                : tmp
+noise               : False
+num_workers         : 0
+opt                 : sgd
+pretrained          : False
+save_dir            : ./checkpoints
+scheduler           : None
+seed                : 1111
+split               : predefined
+test_batch_size     : 64
+timm_aug            : False
+val                 : False
+wd                  : 0.0001
+
+
+Experiment dir: ./checkpoints/tmp-75d5573-1111
+
+loading the CIFAR10 dataset...
+Files already downloaded and verified
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, 50000 train samples (checksum=120.708), 10000 test samples (checksum=121.529)
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-1p-c45a103-1111/checkpoint.pt...
+404 Client Error. (Request ID: Root=1-68a095f6-4a4fdcd927ac99ae7c988fdb;24a93a72-084f-49a3-832f-be7597f4d4f9)
+
+Entry Not Found for url: https://huggingface.co/SamsungSAILMontreal/ghn3/resolve/main//shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-1p-c45a103-1111/checkpoint.pt. 
+Trying to load from local file...
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-1p-c45a103-1111/checkpoint.pt with 4531500 parameters is done!
+WARNING: unrecognized shape torch.Size([128, 4, 3, 3]), so the closest shape at index [np.int64(128), np.int64(8), np.int64(3), np.int64(3)] will be used instead.
+number of parameter tensors predicted using GHN: 161, total parameters predicted: 22992714 (MATCHED!), time to predict (on CPU): 0.1403 sec
+
+Starting training RESNEXT50_32X4D with 22992714 parameters!
+
+epoch=001/001, lr=2.500000e-02
+batch=0001/0391 	 loss=5.4437	top1=13.2812	top5=59.3750 	 0.4712 (sec/batch), mem ram/gpu: 1.66/5.65 (G)
+batch=0100/0391 	 loss=4.4835	top1=15.6250	top5=63.5859 	 0.1130 (sec/batch), mem ram/gpu: 1.67/5.65 (G)
+batch=0200/0391 	 loss=3.8529	top1=17.2500	top5=65.6211 	 0.1093 (sec/batch), mem ram/gpu: 1.67/5.65 (G)
+batch=0300/0391 	 loss=3.6297	top1=17.8021	top5=66.4557 	 0.1080 (sec/batch), mem ram/gpu: 1.67/5.65 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=299
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+batch=0390/0391 	 loss=3.4490	top1=18.4615	top5=67.4279 	 0.1089 (sec/batch), mem ram/gpu: 1.67/5.65 (G)
+batch=0391/0391 	 loss=3.4483	top1=18.4460	top5=67.4180 	 0.1089 (sec/batch), mem ram/gpu: 1.68/5.65 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=390
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+done at 20250816-103058!
+loading the cifar10 dataset...
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, none train samples (checksum=none), 10000 test samples (checksum=121.529)
+Model RESNEXT50_32X4D with 22.992714 parameters loaded from epoch 0, step 390.
+Running evaluation for RESNEXT50_32X4D with 22.99M parameters...
+
+testing: top1=14.16, top5=68.57 (10000 eval samples, time=4.15 seconds)
+
+testing: top1=14.160, top5=68.570 (10000 eval samples, time=8.82 seconds)
+
+
+Environment:
+git commit          : 75d5573
+hostname            : clx-a-02.rc.rit.edu
+torch               : 2.5.1
+torchvision         : 0.20.1
+cuda available      : True
+cudnn enabled       : True
+cuda version        : 12.4
+start time          : 20250816-103117
+
+Script Arguments (train_net mode):
+amp                 : False
+arch                : resnext50_32x4d
+auxiliary           : False
+auxiliary_weight    : 0.4
+batch_size          : 128
+bce                 : False
+beta                : 1e-05
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-2p-c45a103-1111/checkpoint.pt
+compile             : None
+cutout              : False
+cutout_length       : 16
+data_dir            : ./data
+dataset             : cifar10
+debug               : 0
+device              : cuda
+drop_path_prob      : 0
+epochs              : 1
+gamma               : 0.1
+grad_clip           : 5
+imsize              : 32
+init                : rand
+init_channels       : 36
+interm_epoch        : 5
+label_smooth        : 0.1
+layer               : 0
+layers              : 20
+log_interval        : 100
+lr                  : 0.025
+lr_steps            : [30, 60]
+momentum            : 0.9
+multigpu            : False
+n_shots             : None
+name                : tmp
+noise               : False
+num_workers         : 0
+opt                 : sgd
+pretrained          : False
+save_dir            : ./checkpoints
+scheduler           : None
+seed                : 1111
+split               : predefined
+test_batch_size     : 64
+timm_aug            : False
+val                 : False
+wd                  : 0.0001
+
+
+Experiment dir: ./checkpoints/tmp-75d5573-1111
+
+loading the CIFAR10 dataset...
+Files already downloaded and verified
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, 50000 train samples (checksum=120.708), 10000 test samples (checksum=121.529)
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-2p-c45a103-1111/checkpoint.pt...
+404 Client Error. (Request ID: Root=1-68a09637-4d9e123305d4b36828fdb965;af5147ab-c873-455c-95d3-d52ae85e7a50)
+
+Entry Not Found for url: https://huggingface.co/SamsungSAILMontreal/ghn3/resolve/main//shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-2p-c45a103-1111/checkpoint.pt. 
+Trying to load from local file...
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-2p-c45a103-1111/checkpoint.pt with 4531500 parameters is done!
+WARNING: unrecognized shape torch.Size([128, 4, 3, 3]), so the closest shape at index [np.int64(128), np.int64(8), np.int64(3), np.int64(3)] will be used instead.
+number of parameter tensors predicted using GHN: 161, total parameters predicted: 22992714 (MATCHED!), time to predict (on CPU): 0.1532 sec
+
+Starting training RESNEXT50_32X4D with 22992714 parameters!
+
+epoch=001/001, lr=2.500000e-02
+batch=0001/0391 	 loss=8.0433	top1=7.0312	top5=45.3125 	 0.3035 (sec/batch), mem ram/gpu: 1.68/5.65 (G)
+batch=0100/0391 	 loss=3.9101	top1=15.6484	top5=63.5078 	 0.1100 (sec/batch), mem ram/gpu: 1.69/5.65 (G)
+batch=0200/0391 	 loss=3.4087	top1=18.3125	top5=67.6250 	 0.1078 (sec/batch), mem ram/gpu: 1.69/5.65 (G)
+batch=0300/0391 	 loss=3.0783	top1=20.8438	top5=71.0417 	 0.1071 (sec/batch), mem ram/gpu: 1.69/5.65 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=299
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+batch=0390/0391 	 loss=2.8958	top1=22.9527	top5=73.1651 	 0.1080 (sec/batch), mem ram/gpu: 1.69/5.65 (G)
+batch=0391/0391 	 loss=2.8948	top1=22.9680	top5=73.1740 	 0.1202 (sec/batch), mem ram/gpu: 1.70/5.65 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=390
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+done at 20250816-103209!
+loading the cifar10 dataset...
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, none train samples (checksum=none), 10000 test samples (checksum=121.529)
+Model RESNEXT50_32X4D with 22.992714 parameters loaded from epoch 0, step 390.
+Running evaluation for RESNEXT50_32X4D with 22.99M parameters...
+
+testing: top1=34.57, top5=78.81 (10000 eval samples, time=4.16 seconds)
+
+testing: top1=34.570, top5=78.810 (10000 eval samples, time=4.16 seconds)
+
+
+Environment:
+git commit          : 75d5573
+hostname            : clx-a-02.rc.rit.edu
+torch               : 2.5.1
+torchvision         : 0.20.1
+cuda available      : True
+cudnn enabled       : True
+cuda version        : 12.4
+start time          : 20250816-103222
+
+Script Arguments (train_net mode):
+amp                 : False
+arch                : resnext50_32x4d
+auxiliary           : False
+auxiliary_weight    : 0.4
+batch_size          : 128
+bce                 : False
+beta                : 1e-05
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-3p-c45a103-1111/checkpoint.pt
+compile             : None
+cutout              : False
+cutout_length       : 16
+data_dir            : ./data
+dataset             : cifar10
+debug               : 0
+device              : cuda
+drop_path_prob      : 0
+epochs              : 1
+gamma               : 0.1
+grad_clip           : 5
+imsize              : 32
+init                : rand
+init_channels       : 36
+interm_epoch        : 5
+label_smooth        : 0.1
+layer               : 0
+layers              : 20
+log_interval        : 100
+lr                  : 0.025
+lr_steps            : [30, 60]
+momentum            : 0.9
+multigpu            : False
+n_shots             : None
+name                : tmp
+noise               : False
+num_workers         : 0
+opt                 : sgd
+pretrained          : False
+save_dir            : ./checkpoints
+scheduler           : None
+seed                : 1111
+split               : predefined
+test_batch_size     : 64
+timm_aug            : False
+val                 : False
+wd                  : 0.0001
+
+
+Experiment dir: ./checkpoints/tmp-75d5573-1111
+
+loading the CIFAR10 dataset...
+Files already downloaded and verified
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, 50000 train samples (checksum=120.708), 10000 test samples (checksum=121.529)
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-3p-c45a103-1111/checkpoint.pt...
+404 Client Error. (Request ID: Root=1-68a09679-6a70bf4b0e3808a037eb4be5;074f1005-aac8-4532-b1b1-df8a1bcf976c)
+
+Entry Not Found for url: https://huggingface.co/SamsungSAILMontreal/ghn3/resolve/main//shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-3p-c45a103-1111/checkpoint.pt. 
+Trying to load from local file...
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-3p-c45a103-1111/checkpoint.pt with 4531500 parameters is done!
+WARNING: unrecognized shape torch.Size([128, 4, 3, 3]), so the closest shape at index [np.int64(128), np.int64(8), np.int64(3), np.int64(3)] will be used instead.
+number of parameter tensors predicted using GHN: 161, total parameters predicted: 22992714 (MATCHED!), time to predict (on CPU): 0.1403 sec
+
+Starting training RESNEXT50_32X4D with 22992714 parameters!
+
+epoch=001/001, lr=2.500000e-02
+batch=0001/0391 	 loss=5.2378	top1=17.1875	top5=74.2188 	 0.3315 (sec/batch), mem ram/gpu: 1.65/5.65 (G)
+batch=0100/0391 	 loss=4.5230	top1=16.7500	top5=63.5625 	 0.1101 (sec/batch), mem ram/gpu: 1.67/5.65 (G)
+batch=0200/0391 	 loss=3.9488	top1=18.7227	top5=66.4883 	 0.1076 (sec/batch), mem ram/gpu: 1.67/5.65 (G)
+batch=0300/0391 	 loss=3.4549	top1=20.8880	top5=69.8620 	 0.1068 (sec/batch), mem ram/gpu: 1.67/5.65 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=299
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+batch=0390/0391 	 loss=3.1728	top1=22.7845	top5=72.3978 	 0.1075 (sec/batch), mem ram/gpu: 1.67/5.65 (G)
+batch=0391/0391 	 loss=3.1714	top1=22.7900	top5=72.4120 	 0.1075 (sec/batch), mem ram/gpu: 1.67/5.65 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=390
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+done at 20250816-103311!
+loading the cifar10 dataset...
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, none train samples (checksum=none), 10000 test samples (checksum=121.529)
+Model RESNEXT50_32X4D with 22.992714 parameters loaded from epoch 0, step 390.
+Running evaluation for RESNEXT50_32X4D with 22.99M parameters...
+
+testing: top1=32.50, top5=79.82 (10000 eval samples, time=4.09 seconds)
+
+testing: top1=32.500, top5=79.820 (10000 eval samples, time=4.09 seconds)
+
+
+Environment:
+git commit          : 75d5573
+hostname            : clx-a-02.rc.rit.edu
+torch               : 2.5.1
+torchvision         : 0.20.1
+cuda available      : True
+cudnn enabled       : True
+cuda version        : 12.4
+start time          : 20250816-103324
+
+Script Arguments (train_net mode):
+amp                 : False
+arch                : resnext50_32x4d
+auxiliary           : False
+auxiliary_weight    : 0.4
+batch_size          : 128
+bce                 : False
+beta                : 1e-05
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-4p-c45a103-1111/checkpoint.pt
+compile             : None
+cutout              : False
+cutout_length       : 16
+data_dir            : ./data
+dataset             : cifar10
+debug               : 0
+device              : cuda
+drop_path_prob      : 0
+epochs              : 1
+gamma               : 0.1
+grad_clip           : 5
+imsize              : 32
+init                : rand
+init_channels       : 36
+interm_epoch        : 5
+label_smooth        : 0.1
+layer               : 0
+layers              : 20
+log_interval        : 100
+lr                  : 0.025
+lr_steps            : [30, 60]
+momentum            : 0.9
+multigpu            : False
+n_shots             : None
+name                : tmp
+noise               : False
+num_workers         : 0
+opt                 : sgd
+pretrained          : False
+save_dir            : ./checkpoints
+scheduler           : None
+seed                : 1111
+split               : predefined
+test_batch_size     : 64
+timm_aug            : False
+val                 : False
+wd                  : 0.0001
+
+
+Experiment dir: ./checkpoints/tmp-75d5573-1111
+
+loading the CIFAR10 dataset...
+Files already downloaded and verified
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, 50000 train samples (checksum=120.708), 10000 test samples (checksum=121.529)
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-4p-c45a103-1111/checkpoint.pt...
+404 Client Error. (Request ID: Root=1-68a096b7-0359bbaa6fc8e4bd4828bbcc;a0a09f6c-8c9d-4775-8380-54c1937d94d0)
+
+Entry Not Found for url: https://huggingface.co/SamsungSAILMontreal/ghn3/resolve/main//shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-4p-c45a103-1111/checkpoint.pt. 
+Trying to load from local file...
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-4p-c45a103-1111/checkpoint.pt with 4531500 parameters is done!
+WARNING: unrecognized shape torch.Size([128, 4, 3, 3]), so the closest shape at index [np.int64(128), np.int64(8), np.int64(3), np.int64(3)] will be used instead.
+number of parameter tensors predicted using GHN: 161, total parameters predicted: 22992714 (MATCHED!), time to predict (on CPU): 0.1505 sec
+
+Starting training RESNEXT50_32X4D with 22992714 parameters!
+
+epoch=001/001, lr=2.500000e-02
+batch=0001/0391 	 loss=6.6980	top1=17.1875	top5=66.4062 	 0.3234 (sec/batch), mem ram/gpu: 1.66/5.65 (G)
+batch=0100/0391 	 loss=3.6293	top1=16.1797	top5=64.8359 	 0.1107 (sec/batch), mem ram/gpu: 1.67/5.65 (G)
+batch=0200/0391 	 loss=3.1538	top1=18.7461	top5=68.6211 	 0.1083 (sec/batch), mem ram/gpu: 1.67/5.65 (G)
+batch=0300/0391 	 loss=2.8749	top1=21.3359	top5=72.0938 	 0.1075 (sec/batch), mem ram/gpu: 1.67/5.65 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=299
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+batch=0390/0391 	 loss=2.7177	top1=23.1711	top5=74.5312 	 0.1082 (sec/batch), mem ram/gpu: 1.68/5.65 (G)
+batch=0391/0391 	 loss=2.7176	top1=23.1720	top5=74.5180 	 0.1159 (sec/batch), mem ram/gpu: 1.68/5.65 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=390
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+done at 20250816-103420!
+loading the cifar10 dataset...
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, none train samples (checksum=none), 10000 test samples (checksum=121.529)
+Model RESNEXT50_32X4D with 22.992714 parameters loaded from epoch 0, step 390.
+Running evaluation for RESNEXT50_32X4D with 22.99M parameters...
+
+testing: top1=27.61, top5=78.93 (10000 eval samples, time=4.08 seconds)
+
+testing: top1=27.610, top5=78.930 (10000 eval samples, time=4.08 seconds)
+
+
+Environment:
+git commit          : 75d5573
+hostname            : clx-a-02.rc.rit.edu
+torch               : 2.5.1
+torchvision         : 0.20.1
+cuda available      : True
+cudnn enabled       : True
+cuda version        : 12.4
+start time          : 20250816-103434
+
+Script Arguments (train_net mode):
+amp                 : False
+arch                : resnext50_32x4d
+auxiliary           : False
+auxiliary_weight    : 0.4
+batch_size          : 128
+bce                 : False
+beta                : 1e-05
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-5p-c45a103-1111/checkpoint.pt
+compile             : None
+cutout              : False
+cutout_length       : 16
+data_dir            : ./data
+dataset             : cifar10
+debug               : 0
+device              : cuda
+drop_path_prob      : 0
+epochs              : 1
+gamma               : 0.1
+grad_clip           : 5
+imsize              : 32
+init                : rand
+init_channels       : 36
+interm_epoch        : 5
+label_smooth        : 0.1
+layer               : 0
+layers              : 20
+log_interval        : 100
+lr                  : 0.025
+lr_steps            : [30, 60]
+momentum            : 0.9
+multigpu            : False
+n_shots             : None
+name                : tmp
+noise               : False
+num_workers         : 0
+opt                 : sgd
+pretrained          : False
+save_dir            : ./checkpoints
+scheduler           : None
+seed                : 1111
+split               : predefined
+test_batch_size     : 64
+timm_aug            : False
+val                 : False
+wd                  : 0.0001
+
+
+Experiment dir: ./checkpoints/tmp-75d5573-1111
+
+loading the CIFAR10 dataset...
+Files already downloaded and verified
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, 50000 train samples (checksum=120.708), 10000 test samples (checksum=121.529)
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-5p-c45a103-1111/checkpoint.pt...
+404 Client Error. (Request ID: Root=1-68a096fc-6b88eec81dea01cb27bc799d;43d538e7-0a3d-4e26-acb6-f597d2b43bec)
+
+Entry Not Found for url: https://huggingface.co/SamsungSAILMontreal/ghn3/resolve/main//shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-5p-c45a103-1111/checkpoint.pt. 
+Trying to load from local file...
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-5p-c45a103-1111/checkpoint.pt with 4531500 parameters is done!
+WARNING: unrecognized shape torch.Size([128, 4, 3, 3]), so the closest shape at index [np.int64(128), np.int64(8), np.int64(3), np.int64(3)] will be used instead.
+number of parameter tensors predicted using GHN: 161, total parameters predicted: 22992714 (MATCHED!), time to predict (on CPU): 0.1466 sec
+
+Starting training RESNEXT50_32X4D with 22992714 parameters!
+
+epoch=001/001, lr=2.500000e-02
+batch=0001/0391 	 loss=5.3796	top1=17.9688	top5=73.4375 	 0.3127 (sec/batch), mem ram/gpu: 1.66/5.65 (G)
+batch=0100/0391 	 loss=4.1228	top1=18.0078	top5=66.2109 	 0.1099 (sec/batch), mem ram/gpu: 1.68/5.65 (G)
+batch=0200/0391 	 loss=3.7723	top1=20.0391	top5=69.3945 	 0.1077 (sec/batch), mem ram/gpu: 1.68/5.65 (G)
+batch=0300/0391 	 loss=3.5210	top1=21.7891	top5=71.3646 	 0.1069 (sec/batch), mem ram/gpu: 1.68/5.65 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=299
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+batch=0390/0391 	 loss=3.4088	top1=22.9087	top5=72.4419 	 0.1084 (sec/batch), mem ram/gpu: 1.68/5.65 (G)
+batch=0391/0391 	 loss=3.4092	top1=22.9080	top5=72.4240 	 0.1084 (sec/batch), mem ram/gpu: 1.69/5.65 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=390
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+done at 20250816-103521!
+loading the cifar10 dataset...
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, none train samples (checksum=none), 10000 test samples (checksum=121.529)
+Model RESNEXT50_32X4D with 22.992714 parameters loaded from epoch 0, step 390.
+Running evaluation for RESNEXT50_32X4D with 22.99M parameters...
+
+testing: top1=19.28, top5=64.36 (10000 eval samples, time=4.08 seconds)
+
+testing: top1=19.280, top5=64.360 (10000 eval samples, time=4.08 seconds)
+
+
+Environment:
+git commit          : 75d5573
+hostname            : clx-a-02.rc.rit.edu
+torch               : 2.5.1
+torchvision         : 0.20.1
+cuda available      : True
+cudnn enabled       : True
+cuda version        : 12.4
+start time          : 20250816-103534
+
+Script Arguments (train_net mode):
+amp                 : False
+arch                : resnext50_32x4d
+auxiliary           : False
+auxiliary_weight    : 0.4
+batch_size          : 128
+bce                 : False
+beta                : 1e-05
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-6p-c45a103-1111/checkpoint.pt
+compile             : None
+cutout              : False
+cutout_length       : 16
+data_dir            : ./data
+dataset             : cifar10
+debug               : 0
+device              : cuda
+drop_path_prob      : 0
+epochs              : 1
+gamma               : 0.1
+grad_clip           : 5
+imsize              : 32
+init                : rand
+init_channels       : 36
+interm_epoch        : 5
+label_smooth        : 0.1
+layer               : 0
+layers              : 20
+log_interval        : 100
+lr                  : 0.025
+lr_steps            : [30, 60]
+momentum            : 0.9
+multigpu            : False
+n_shots             : None
+name                : tmp
+noise               : False
+num_workers         : 0
+opt                 : sgd
+pretrained          : False
+save_dir            : ./checkpoints
+scheduler           : None
+seed                : 1111
+split               : predefined
+test_batch_size     : 64
+timm_aug            : False
+val                 : False
+wd                  : 0.0001
+
+
+Experiment dir: ./checkpoints/tmp-75d5573-1111
+
+loading the CIFAR10 dataset...
+Files already downloaded and verified
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, 50000 train samples (checksum=120.708), 10000 test samples (checksum=121.529)
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-6p-c45a103-1111/checkpoint.pt...
+404 Client Error. (Request ID: Root=1-68a09739-4a8c3ca54bfcc3350ba95b62;8a81a921-ae0a-493b-a782-bd667898fa2d)
+
+Entry Not Found for url: https://huggingface.co/SamsungSAILMontreal/ghn3/resolve/main//shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-6p-c45a103-1111/checkpoint.pt. 
+Trying to load from local file...
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-6p-c45a103-1111/checkpoint.pt with 4531500 parameters is done!
+WARNING: unrecognized shape torch.Size([128, 4, 3, 3]), so the closest shape at index [np.int64(128), np.int64(8), np.int64(3), np.int64(3)] will be used instead.
+number of parameter tensors predicted using GHN: 161, total parameters predicted: 22992714 (MATCHED!), time to predict (on CPU): 0.1412 sec
+
+Starting training RESNEXT50_32X4D with 22992714 parameters!
+
+epoch=001/001, lr=2.500000e-02
+batch=0001/0391 	 loss=6.0769	top1=20.3125	top5=68.7500 	 0.3249 (sec/batch), mem ram/gpu: 1.65/5.65 (G)
+batch=0100/0391 	 loss=3.7697	top1=18.0938	top5=65.9922 	 0.1104 (sec/batch), mem ram/gpu: 1.67/5.65 (G)
+batch=0200/0391 	 loss=3.3901	top1=19.6016	top5=68.6719 	 0.1080 (sec/batch), mem ram/gpu: 1.67/5.65 (G)
+batch=0300/0391 	 loss=3.1627	top1=20.8750	top5=70.5729 	 0.1071 (sec/batch), mem ram/gpu: 1.67/5.65 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=299
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+batch=0390/0391 	 loss=2.9780	top1=21.9792	top5=72.1294 	 0.1079 (sec/batch), mem ram/gpu: 1.67/5.65 (G)
+batch=0391/0391 	 loss=2.9769	top1=21.9860	top5=72.1400 	 0.1078 (sec/batch), mem ram/gpu: 1.67/5.65 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=390
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+done at 20250816-103621!
+loading the cifar10 dataset...
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, none train samples (checksum=none), 10000 test samples (checksum=121.529)
+Model RESNEXT50_32X4D with 22.992714 parameters loaded from epoch 0, step 390.
+Running evaluation for RESNEXT50_32X4D with 22.99M parameters...
+
+testing: top1=23.30, top5=75.06 (10000 eval samples, time=4.09 seconds)
+
+testing: top1=23.300, top5=75.060 (10000 eval samples, time=4.09 seconds)
+
+
+Environment:
+git commit          : 75d5573
+hostname            : clx-a-02.rc.rit.edu
+torch               : 2.5.1
+torchvision         : 0.20.1
+cuda available      : True
+cudnn enabled       : True
+cuda version        : 12.4
+start time          : 20250816-103635
+
+Script Arguments (train_net mode):
+amp                 : False
+arch                : resnext50_32x4d
+auxiliary           : False
+auxiliary_weight    : 0.4
+batch_size          : 128
+bce                 : False
+beta                : 1e-05
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-7p-c45a103-1111/checkpoint.pt
+compile             : None
+cutout              : False
+cutout_length       : 16
+data_dir            : ./data
+dataset             : cifar10
+debug               : 0
+device              : cuda
+drop_path_prob      : 0
+epochs              : 1
+gamma               : 0.1
+grad_clip           : 5
+imsize              : 32
+init                : rand
+init_channels       : 36
+interm_epoch        : 5
+label_smooth        : 0.1
+layer               : 0
+layers              : 20
+log_interval        : 100
+lr                  : 0.025
+lr_steps            : [30, 60]
+momentum            : 0.9
+multigpu            : False
+n_shots             : None
+name                : tmp
+noise               : False
+num_workers         : 0
+opt                 : sgd
+pretrained          : False
+save_dir            : ./checkpoints
+scheduler           : None
+seed                : 1111
+split               : predefined
+test_batch_size     : 64
+timm_aug            : False
+val                 : False
+wd                  : 0.0001
+
+
+Experiment dir: ./checkpoints/tmp-75d5573-1111
+
+loading the CIFAR10 dataset...
+Files already downloaded and verified
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, 50000 train samples (checksum=120.708), 10000 test samples (checksum=121.529)
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-7p-c45a103-1111/checkpoint.pt...
+404 Client Error. (Request ID: Root=1-68a09775-5ca59dd212ca84ab4e0f954d;e691133a-42da-4b59-bbcc-4e0082e5132c)
+
+Entry Not Found for url: https://huggingface.co/SamsungSAILMontreal/ghn3/resolve/main//shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-7p-c45a103-1111/checkpoint.pt. 
+Trying to load from local file...
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-7p-c45a103-1111/checkpoint.pt with 4531500 parameters is done!
+WARNING: unrecognized shape torch.Size([128, 4, 3, 3]), so the closest shape at index [np.int64(128), np.int64(8), np.int64(3), np.int64(3)] will be used instead.
+number of parameter tensors predicted using GHN: 161, total parameters predicted: 22992714 (MATCHED!), time to predict (on CPU): 0.1403 sec
+
+Starting training RESNEXT50_32X4D with 22992714 parameters!
+
+epoch=001/001, lr=2.500000e-02
+batch=0001/0391 	 loss=5.5431	top1=18.7500	top5=65.6250 	 0.3233 (sec/batch), mem ram/gpu: 1.64/5.65 (G)
+batch=0100/0391 	 loss=4.7593	top1=16.6484	top5=62.3750 	 0.1100 (sec/batch), mem ram/gpu: 1.66/5.65 (G)
+batch=0200/0391 	 loss=4.1612	top1=19.0547	top5=66.1719 	 0.1077 (sec/batch), mem ram/gpu: 1.66/5.65 (G)
+batch=0300/0391 	 loss=3.7111	top1=21.1510	top5=69.3776 	 0.1069 (sec/batch), mem ram/gpu: 1.66/5.65 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=299
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+batch=0390/0391 	 loss=3.4425	top1=22.8205	top5=71.4663 	 0.1078 (sec/batch), mem ram/gpu: 1.66/5.65 (G)
+batch=0391/0391 	 loss=3.4408	top1=22.8280	top5=71.4840 	 0.1078 (sec/batch), mem ram/gpu: 1.66/5.65 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=390
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+done at 20250816-103722!
+loading the cifar10 dataset...
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, none train samples (checksum=none), 10000 test samples (checksum=121.529)
+Model RESNEXT50_32X4D with 22.992714 parameters loaded from epoch 0, step 390.
+Running evaluation for RESNEXT50_32X4D with 22.99M parameters...
+
+testing: top1=37.50, top5=85.45 (10000 eval samples, time=4.08 seconds)
+
+testing: top1=37.500, top5=85.450 (10000 eval samples, time=4.08 seconds)
+
+
+Environment:
+git commit          : 75d5573
+hostname            : clx-a-02.rc.rit.edu
+torch               : 2.5.1
+torchvision         : 0.20.1
+cuda available      : True
+cudnn enabled       : True
+cuda version        : 12.4
+start time          : 20250816-103735
+
+Script Arguments (train_net mode):
+amp                 : False
+arch                : resnext50_32x4d
+auxiliary           : False
+auxiliary_weight    : 0.4
+batch_size          : 128
+bce                 : False
+beta                : 1e-05
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-8p-c45a103-1111/checkpoint.pt
+compile             : None
+cutout              : False
+cutout_length       : 16
+data_dir            : ./data
+dataset             : cifar10
+debug               : 0
+device              : cuda
+drop_path_prob      : 0
+epochs              : 1
+gamma               : 0.1
+grad_clip           : 5
+imsize              : 32
+init                : rand
+init_channels       : 36
+interm_epoch        : 5
+label_smooth        : 0.1
+layer               : 0
+layers              : 20
+log_interval        : 100
+lr                  : 0.025
+lr_steps            : [30, 60]
+momentum            : 0.9
+multigpu            : False
+n_shots             : None
+name                : tmp
+noise               : False
+num_workers         : 0
+opt                 : sgd
+pretrained          : False
+save_dir            : ./checkpoints
+scheduler           : None
+seed                : 1111
+split               : predefined
+test_batch_size     : 64
+timm_aug            : False
+val                 : False
+wd                  : 0.0001
+
+
+Experiment dir: ./checkpoints/tmp-75d5573-1111
+
+loading the CIFAR10 dataset...
+Files already downloaded and verified
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, 50000 train samples (checksum=120.708), 10000 test samples (checksum=121.529)
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-8p-c45a103-1111/checkpoint.pt...
+404 Client Error. (Request ID: Root=1-68a097b2-21e3ca9375477c85147d1a3c;17935039-9c59-419e-b5a6-13b85f3db66b)
+
+Entry Not Found for url: https://huggingface.co/SamsungSAILMontreal/ghn3/resolve/main//shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-8p-c45a103-1111/checkpoint.pt. 
+Trying to load from local file...
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-8p-c45a103-1111/checkpoint.pt with 4531500 parameters is done!
+WARNING: unrecognized shape torch.Size([128, 4, 3, 3]), so the closest shape at index [np.int64(128), np.int64(8), np.int64(3), np.int64(3)] will be used instead.
+number of parameter tensors predicted using GHN: 161, total parameters predicted: 22992714 (MATCHED!), time to predict (on CPU): 0.1488 sec
+
+Starting training RESNEXT50_32X4D with 22992714 parameters!
+
+epoch=001/001, lr=2.500000e-02
+batch=0001/0391 	 loss=8.4455	top1=14.0625	top5=55.4688 	 0.3098 (sec/batch), mem ram/gpu: 1.65/5.65 (G)
+batch=0100/0391 	 loss=3.7814	top1=17.0000	top5=66.4219 	 0.1101 (sec/batch), mem ram/gpu: 1.67/5.65 (G)
+batch=0200/0391 	 loss=3.3285	top1=19.2344	top5=69.1836 	 0.1079 (sec/batch), mem ram/gpu: 1.67/5.65 (G)
+batch=0300/0391 	 loss=3.1002	top1=20.4688	top5=71.0781 	 0.1071 (sec/batch), mem ram/gpu: 1.67/5.65 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=299
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+batch=0390/0391 	 loss=2.9357	top1=21.9371	top5=72.7845 	 0.1082 (sec/batch), mem ram/gpu: 1.68/5.65 (G)
+batch=0391/0391 	 loss=2.9348	top1=21.9540	top5=72.7860 	 0.1082 (sec/batch), mem ram/gpu: 1.68/5.65 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=390
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+done at 20250816-103822!
+loading the cifar10 dataset...
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, none train samples (checksum=none), 10000 test samples (checksum=121.529)
+Model RESNEXT50_32X4D with 22.992714 parameters loaded from epoch 0, step 390.
+Running evaluation for RESNEXT50_32X4D with 22.99M parameters...
+
+testing: top1=32.15, top5=76.93 (10000 eval samples, time=4.09 seconds)
+
+testing: top1=32.150, top5=76.930 (10000 eval samples, time=4.09 seconds)
+
+
+Environment:
+git commit          : 75d5573
+hostname            : clx-a-02.rc.rit.edu
+torch               : 2.5.1
+torchvision         : 0.20.1
+cuda available      : True
+cudnn enabled       : True
+cuda version        : 12.4
+start time          : 20250816-103836
+
+Script Arguments (train_net mode):
+amp                 : False
+arch                : resnext50_32x4d
+auxiliary           : False
+auxiliary_weight    : 0.4
+batch_size          : 128
+bce                 : False
+beta                : 1e-05
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-9p-c45a103-1111/checkpoint.pt
+compile             : None
+cutout              : False
+cutout_length       : 16
+data_dir            : ./data
+dataset             : cifar10
+debug               : 0
+device              : cuda
+drop_path_prob      : 0
+epochs              : 1
+gamma               : 0.1
+grad_clip           : 5
+imsize              : 32
+init                : rand
+init_channels       : 36
+interm_epoch        : 5
+label_smooth        : 0.1
+layer               : 0
+layers              : 20
+log_interval        : 100
+lr                  : 0.025
+lr_steps            : [30, 60]
+momentum            : 0.9
+multigpu            : False
+n_shots             : None
+name                : tmp
+noise               : False
+num_workers         : 0
+opt                 : sgd
+pretrained          : False
+save_dir            : ./checkpoints
+scheduler           : None
+seed                : 1111
+split               : predefined
+test_batch_size     : 64
+timm_aug            : False
+val                 : False
+wd                  : 0.0001
+
+
+Experiment dir: ./checkpoints/tmp-75d5573-1111
+
+loading the CIFAR10 dataset...
+Files already downloaded and verified
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, 50000 train samples (checksum=120.708), 10000 test samples (checksum=121.529)
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-9p-c45a103-1111/checkpoint.pt...
+404 Client Error. (Request ID: Root=1-68a097ee-57d1dc4d6f57351f24709a8d;bf534fd8-b2f5-42f4-b6a8-ad2e0559736c)
+
+Entry Not Found for url: https://huggingface.co/SamsungSAILMontreal/ghn3/resolve/main//shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-9p-c45a103-1111/checkpoint.pt. 
+Trying to load from local file...
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-9p-c45a103-1111/checkpoint.pt with 4531500 parameters is done!
+WARNING: unrecognized shape torch.Size([128, 4, 3, 3]), so the closest shape at index [np.int64(128), np.int64(8), np.int64(3), np.int64(3)] will be used instead.
+number of parameter tensors predicted using GHN: 161, total parameters predicted: 22992714 (MATCHED!), time to predict (on CPU): 0.1465 sec
+
+Starting training RESNEXT50_32X4D with 22992714 parameters!
+
+epoch=001/001, lr=2.500000e-02
+batch=0001/0391 	 loss=8.9239	top1=14.8438	top5=55.4688 	 0.3111 (sec/batch), mem ram/gpu: 1.67/5.65 (G)
+batch=0100/0391 	 loss=4.2825	top1=16.4531	top5=63.5703 	 0.1100 (sec/batch), mem ram/gpu: 1.68/5.65 (G)
+batch=0200/0391 	 loss=3.7862	top1=19.1367	top5=67.3398 	 0.1078 (sec/batch), mem ram/gpu: 1.68/5.65 (G)
+batch=0300/0391 	 loss=3.5422	top1=20.8984	top5=69.4349 	 0.1070 (sec/batch), mem ram/gpu: 1.68/5.65 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=299
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+batch=0390/0391 	 loss=3.2862	top1=22.6442	top5=71.6827 	 0.1082 (sec/batch), mem ram/gpu: 1.68/5.65 (G)
+batch=0391/0391 	 loss=3.2847	top1=22.6420	top5=71.6940 	 0.1082 (sec/batch), mem ram/gpu: 1.69/5.65 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=390
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+done at 20250816-103923!
+loading the cifar10 dataset...
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, none train samples (checksum=none), 10000 test samples (checksum=121.529)
+Model RESNEXT50_32X4D with 22.992714 parameters loaded from epoch 0, step 390.
+Running evaluation for RESNEXT50_32X4D with 22.99M parameters...
+
+testing: top1=36.65, top5=83.30 (10000 eval samples, time=4.08 seconds)
+
+testing: top1=36.650, top5=83.300 (10000 eval samples, time=4.08 seconds)
+
+
+Environment:
+git commit          : 75d5573
+hostname            : clx-a-02.rc.rit.edu
+torch               : 2.5.1
+torchvision         : 0.20.1
+cuda available      : True
+cudnn enabled       : True
+cuda version        : 12.4
+start time          : 20250816-103937
+
+Script Arguments (train_net mode):
+amp                 : False
+arch                : resnext50_32x4d
+auxiliary           : False
+auxiliary_weight    : 0.4
+batch_size          : 128
+bce                 : False
+beta                : 1e-05
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-10p-b3289ac-1111/checkpoint.pt
+compile             : None
+cutout              : False
+cutout_length       : 16
+data_dir            : ./data
+dataset             : cifar10
+debug               : 0
+device              : cuda
+drop_path_prob      : 0
+epochs              : 1
+gamma               : 0.1
+grad_clip           : 5
+imsize              : 32
+init                : rand
+init_channels       : 36
+interm_epoch        : 5
+label_smooth        : 0.1
+layer               : 0
+layers              : 20
+log_interval        : 100
+lr                  : 0.025
+lr_steps            : [30, 60]
+momentum            : 0.9
+multigpu            : False
+n_shots             : None
+name                : tmp
+noise               : False
+num_workers         : 0
+opt                 : sgd
+pretrained          : False
+save_dir            : ./checkpoints
+scheduler           : None
+seed                : 1111
+split               : predefined
+test_batch_size     : 64
+timm_aug            : False
+val                 : False
+wd                  : 0.0001
+
+
+Experiment dir: ./checkpoints/tmp-75d5573-1111
+
+loading the CIFAR10 dataset...
+Files already downloaded and verified
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, 50000 train samples (checksum=120.708), 10000 test samples (checksum=121.529)
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-10p-b3289ac-1111/checkpoint.pt...
+404 Client Error. (Request ID: Root=1-68a0982b-3238b4e701f4ef3d10425815;d25b196f-84fa-47bc-9d9d-7880a0557edb)
+
+Entry Not Found for url: https://huggingface.co/SamsungSAILMontreal/ghn3/resolve/main//shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-10p-b3289ac-1111/checkpoint.pt. 
+Trying to load from local file...
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-10p-b3289ac-1111/checkpoint.pt with 4531500 parameters is done!
+WARNING: unrecognized shape torch.Size([128, 4, 3, 3]), so the closest shape at index [np.int64(128), np.int64(8), np.int64(3), np.int64(3)] will be used instead.
+number of parameter tensors predicted using GHN: 161, total parameters predicted: 22992714 (MATCHED!), time to predict (on CPU): 0.1476 sec
+
+Starting training RESNEXT50_32X4D with 22992714 parameters!
+
+epoch=001/001, lr=2.500000e-02
+batch=0001/0391 	 loss=7.3655	top1=10.1562	top5=57.0312 	 0.3085 (sec/batch), mem ram/gpu: 1.68/5.65 (G)
+batch=0100/0391 	 loss=3.9616	top1=19.0234	top5=66.7109 	 0.1101 (sec/batch), mem ram/gpu: 1.69/5.65 (G)
+batch=0200/0391 	 loss=3.4977	top1=21.1992	top5=69.5156 	 0.1177 (sec/batch), mem ram/gpu: 1.69/5.65 (G)
+batch=0300/0391 	 loss=3.1762	top1=23.1224	top5=72.1380 	 0.1137 (sec/batch), mem ram/gpu: 1.69/5.65 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=299
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+batch=0390/0391 	 loss=2.9960	top1=24.5753	top5=73.8922 	 0.1130 (sec/batch), mem ram/gpu: 1.70/5.65 (G)
+batch=0391/0391 	 loss=2.9948	top1=24.5820	top5=73.9020 	 0.1129 (sec/batch), mem ram/gpu: 1.70/5.65 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=390
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+done at 20250816-104026!
+loading the cifar10 dataset...
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, none train samples (checksum=none), 10000 test samples (checksum=121.529)
+Model RESNEXT50_32X4D with 22.992714 parameters loaded from epoch 0, step 390.
+Running evaluation for RESNEXT50_32X4D with 22.99M parameters...
+
+testing: top1=34.85, top5=86.32 (10000 eval samples, time=4.15 seconds)
+
+testing: top1=34.850, top5=86.320 (10000 eval samples, time=4.15 seconds)
+
+
+Environment:
+git commit          : 75d5573
+hostname            : clx-a-02.rc.rit.edu
+torch               : 2.5.1
+torchvision         : 0.20.1
+cuda available      : True
+cudnn enabled       : True
+cuda version        : 12.4
+start time          : 20250816-104040
+
+Script Arguments (train_net mode):
+amp                 : False
+arch                : resnext50_32x4d
+auxiliary           : False
+auxiliary_weight    : 0.4
+batch_size          : 128
+bce                 : False
+beta                : 1e-05
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-20p-b3289ac-1111/checkpoint.pt
+compile             : None
+cutout              : False
+cutout_length       : 16
+data_dir            : ./data
+dataset             : cifar10
+debug               : 0
+device              : cuda
+drop_path_prob      : 0
+epochs              : 1
+gamma               : 0.1
+grad_clip           : 5
+imsize              : 32
+init                : rand
+init_channels       : 36
+interm_epoch        : 5
+label_smooth        : 0.1
+layer               : 0
+layers              : 20
+log_interval        : 100
+lr                  : 0.025
+lr_steps            : [30, 60]
+momentum            : 0.9
+multigpu            : False
+n_shots             : None
+name                : tmp
+noise               : False
+num_workers         : 0
+opt                 : sgd
+pretrained          : False
+save_dir            : ./checkpoints
+scheduler           : None
+seed                : 1111
+split               : predefined
+test_batch_size     : 64
+timm_aug            : False
+val                 : False
+wd                  : 0.0001
+
+
+Experiment dir: ./checkpoints/tmp-75d5573-1111
+
+loading the CIFAR10 dataset...
+Files already downloaded and verified
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, 50000 train samples (checksum=120.708), 10000 test samples (checksum=121.529)
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-20p-b3289ac-1111/checkpoint.pt...
+404 Client Error. (Request ID: Root=1-68a0986a-400d607f41f21dc850a2d513;18c59bb3-525f-435b-ba1f-73792ae0e49f)
+
+Entry Not Found for url: https://huggingface.co/SamsungSAILMontreal/ghn3/resolve/main//shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-20p-b3289ac-1111/checkpoint.pt. 
+Trying to load from local file...
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-20p-b3289ac-1111/checkpoint.pt with 4531500 parameters is done!
+WARNING: unrecognized shape torch.Size([128, 4, 3, 3]), so the closest shape at index [np.int64(128), np.int64(8), np.int64(3), np.int64(3)] will be used instead.
+number of parameter tensors predicted using GHN: 161, total parameters predicted: 22992714 (MATCHED!), time to predict (on CPU): 0.1516 sec
+
+Starting training RESNEXT50_32X4D with 22992714 parameters!
+
+epoch=001/001, lr=2.500000e-02
+batch=0001/0391 	 loss=6.7966	top1=11.7188	top5=63.2812 	 0.3295 (sec/batch), mem ram/gpu: 1.65/5.65 (G)
+batch=0100/0391 	 loss=3.7592	top1=16.6328	top5=63.1016 	 0.1106 (sec/batch), mem ram/gpu: 1.67/5.65 (G)
+batch=0200/0391 	 loss=3.1948	top1=19.6562	top5=68.6133 	 0.1080 (sec/batch), mem ram/gpu: 1.67/5.65 (G)
+batch=0300/0391 	 loss=2.9371	top1=21.8125	top5=71.8620 	 0.1072 (sec/batch), mem ram/gpu: 1.67/5.65 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=299
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+batch=0390/0391 	 loss=2.7869	top1=23.6619	top5=74.0325 	 0.1081 (sec/batch), mem ram/gpu: 1.68/5.65 (G)
+batch=0391/0391 	 loss=2.7860	top1=23.6800	top5=74.0480 	 0.1081 (sec/batch), mem ram/gpu: 1.68/5.65 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=390
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+done at 20250816-104126!
+loading the cifar10 dataset...
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, none train samples (checksum=none), 10000 test samples (checksum=121.529)
+Model RESNEXT50_32X4D with 22.992714 parameters loaded from epoch 0, step 390.
+Running evaluation for RESNEXT50_32X4D with 22.99M parameters...
+
+testing: top1=29.38, top5=78.65 (10000 eval samples, time=4.13 seconds)
+
+testing: top1=29.380, top5=78.650 (10000 eval samples, time=4.13 seconds)
+
+
+Environment:
+git commit          : 75d5573
+hostname            : clx-a-02.rc.rit.edu
+torch               : 2.5.1
+torchvision         : 0.20.1
+cuda available      : True
+cudnn enabled       : True
+cuda version        : 12.4
+start time          : 20250816-104140
+
+Script Arguments (train_net mode):
+amp                 : False
+arch                : resnext50_32x4d
+auxiliary           : False
+auxiliary_weight    : 0.4
+batch_size          : 128
+bce                 : False
+beta                : 1e-05
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-30p-b3289ac-1111/checkpoint.pt
+compile             : None
+cutout              : False
+cutout_length       : 16
+data_dir            : ./data
+dataset             : cifar10
+debug               : 0
+device              : cuda
+drop_path_prob      : 0
+epochs              : 1
+gamma               : 0.1
+grad_clip           : 5
+imsize              : 32
+init                : rand
+init_channels       : 36
+interm_epoch        : 5
+label_smooth        : 0.1
+layer               : 0
+layers              : 20
+log_interval        : 100
+lr                  : 0.025
+lr_steps            : [30, 60]
+momentum            : 0.9
+multigpu            : False
+n_shots             : None
+name                : tmp
+noise               : False
+num_workers         : 0
+opt                 : sgd
+pretrained          : False
+save_dir            : ./checkpoints
+scheduler           : None
+seed                : 1111
+split               : predefined
+test_batch_size     : 64
+timm_aug            : False
+val                 : False
+wd                  : 0.0001
+
+
+Experiment dir: ./checkpoints/tmp-75d5573-1111
+
+loading the CIFAR10 dataset...
+Files already downloaded and verified
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, 50000 train samples (checksum=120.708), 10000 test samples (checksum=121.529)
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-30p-b3289ac-1111/checkpoint.pt...
+404 Client Error. (Request ID: Root=1-68a098a7-0be31bc96793722a2792ffc9;47f8e88f-bfb8-45d2-9420-8e8f4d32865f)
+
+Entry Not Found for url: https://huggingface.co/SamsungSAILMontreal/ghn3/resolve/main//shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-30p-b3289ac-1111/checkpoint.pt. 
+Trying to load from local file...
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-30p-b3289ac-1111/checkpoint.pt with 4531500 parameters is done!
+WARNING: unrecognized shape torch.Size([128, 4, 3, 3]), so the closest shape at index [np.int64(128), np.int64(8), np.int64(3), np.int64(3)] will be used instead.
+number of parameter tensors predicted using GHN: 161, total parameters predicted: 22992714 (MATCHED!), time to predict (on CPU): 0.1557 sec
+
+Starting training RESNEXT50_32X4D with 22992714 parameters!
+
+epoch=001/001, lr=2.500000e-02
+batch=0001/0391 	 loss=7.2522	top1=14.0625	top5=68.7500 	 0.3019 (sec/batch), mem ram/gpu: 1.68/5.65 (G)
+batch=0100/0391 	 loss=3.8629	top1=18.4531	top5=68.7031 	 0.1101 (sec/batch), mem ram/gpu: 1.70/5.65 (G)
+batch=0200/0391 	 loss=3.7107	top1=19.7344	top5=70.7656 	 0.1078 (sec/batch), mem ram/gpu: 1.70/5.65 (G)
+batch=0300/0391 	 loss=3.4743	top1=21.6354	top5=72.6276 	 0.1070 (sec/batch), mem ram/gpu: 1.70/5.65 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=299
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+batch=0390/0391 	 loss=3.2999	top1=23.0950	top5=74.0224 	 0.1078 (sec/batch), mem ram/gpu: 1.70/5.65 (G)
+batch=0391/0391 	 loss=3.2990	top1=23.1080	top5=74.0260 	 0.1078 (sec/batch), mem ram/gpu: 1.71/5.65 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=390
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+done at 20250816-104227!
+loading the cifar10 dataset...
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, none train samples (checksum=none), 10000 test samples (checksum=121.529)
+Model RESNEXT50_32X4D with 22.992714 parameters loaded from epoch 0, step 390.
+Running evaluation for RESNEXT50_32X4D with 22.99M parameters...
+
+testing: top1=27.38, top5=77.97 (10000 eval samples, time=4.13 seconds)
+
+testing: top1=27.380, top5=77.970 (10000 eval samples, time=4.13 seconds)
+
+
+Environment:
+git commit          : 75d5573
+hostname            : clx-a-02.rc.rit.edu
+torch               : 2.5.1
+torchvision         : 0.20.1
+cuda available      : True
+cudnn enabled       : True
+cuda version        : 12.4
+start time          : 20250816-104240
+
+Script Arguments (train_net mode):
+amp                 : False
+arch                : resnext50_32x4d
+auxiliary           : False
+auxiliary_weight    : 0.4
+batch_size          : 128
+bce                 : False
+beta                : 1e-05
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-40p-b3289ac-1111/checkpoint.pt
+compile             : None
+cutout              : False
+cutout_length       : 16
+data_dir            : ./data
+dataset             : cifar10
+debug               : 0
+device              : cuda
+drop_path_prob      : 0
+epochs              : 1
+gamma               : 0.1
+grad_clip           : 5
+imsize              : 32
+init                : rand
+init_channels       : 36
+interm_epoch        : 5
+label_smooth        : 0.1
+layer               : 0
+layers              : 20
+log_interval        : 100
+lr                  : 0.025
+lr_steps            : [30, 60]
+momentum            : 0.9
+multigpu            : False
+n_shots             : None
+name                : tmp
+noise               : False
+num_workers         : 0
+opt                 : sgd
+pretrained          : False
+save_dir            : ./checkpoints
+scheduler           : None
+seed                : 1111
+split               : predefined
+test_batch_size     : 64
+timm_aug            : False
+val                 : False
+wd                  : 0.0001
+
+
+Experiment dir: ./checkpoints/tmp-75d5573-1111
+
+loading the CIFAR10 dataset...
+Files already downloaded and verified
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, 50000 train samples (checksum=120.708), 10000 test samples (checksum=121.529)
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-40p-b3289ac-1111/checkpoint.pt...
+404 Client Error. (Request ID: Root=1-68a098e3-5fcf3ccd738b1a972ec09f34;ef8edc84-417a-48df-a09e-383c5ae5cfbf)
+
+Entry Not Found for url: https://huggingface.co/SamsungSAILMontreal/ghn3/resolve/main//shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-40p-b3289ac-1111/checkpoint.pt. 
+Trying to load from local file...
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-40p-b3289ac-1111/checkpoint.pt with 4531500 parameters is done!
+WARNING: unrecognized shape torch.Size([128, 4, 3, 3]), so the closest shape at index [np.int64(128), np.int64(8), np.int64(3), np.int64(3)] will be used instead.
+number of parameter tensors predicted using GHN: 161, total parameters predicted: 22992714 (MATCHED!), time to predict (on CPU): 0.1526 sec
+
+Starting training RESNEXT50_32X4D with 22992714 parameters!
+
+epoch=001/001, lr=2.500000e-02
+batch=0001/0391 	 loss=8.6468	top1=7.8125	top5=59.3750 	 0.3127 (sec/batch), mem ram/gpu: 1.65/5.65 (G)
+batch=0100/0391 	 loss=4.1068	top1=18.4609	top5=64.6250 	 0.1101 (sec/batch), mem ram/gpu: 1.67/5.65 (G)
+batch=0200/0391 	 loss=3.8743	top1=20.1602	top5=67.5898 	 0.1078 (sec/batch), mem ram/gpu: 1.67/5.65 (G)
+batch=0300/0391 	 loss=3.6221	top1=21.9661	top5=70.3932 	 0.1198 (sec/batch), mem ram/gpu: 1.67/5.65 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=299
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+batch=0390/0391 	 loss=3.4810	top1=23.1330	top5=71.9952 	 0.1178 (sec/batch), mem ram/gpu: 1.67/5.65 (G)
+batch=0391/0391 	 loss=3.4802	top1=23.1480	top5=72.0100 	 0.1178 (sec/batch), mem ram/gpu: 1.68/5.65 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=390
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+done at 20250816-104331!
+loading the cifar10 dataset...
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, none train samples (checksum=none), 10000 test samples (checksum=121.529)
+Model RESNEXT50_32X4D with 22.992714 parameters loaded from epoch 0, step 390.
+Running evaluation for RESNEXT50_32X4D with 22.99M parameters...
+
+testing: top1=37.37, top5=82.20 (10000 eval samples, time=4.16 seconds)
+
+testing: top1=37.370, top5=82.200 (10000 eval samples, time=4.16 seconds)
+
+
+Environment:
+git commit          : 75d5573
+hostname            : clx-a-02.rc.rit.edu
+torch               : 2.5.1
+torchvision         : 0.20.1
+cuda available      : True
+cudnn enabled       : True
+cuda version        : 12.4
+start time          : 20250816-104345
+
+Script Arguments (train_net mode):
+amp                 : False
+arch                : resnext50_32x4d
+auxiliary           : False
+auxiliary_weight    : 0.4
+batch_size          : 128
+bce                 : False
+beta                : 1e-05
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-50p-b3289ac-1111/checkpoint.pt
+compile             : None
+cutout              : False
+cutout_length       : 16
+data_dir            : ./data
+dataset             : cifar10
+debug               : 0
+device              : cuda
+drop_path_prob      : 0
+epochs              : 1
+gamma               : 0.1
+grad_clip           : 5
+imsize              : 32
+init                : rand
+init_channels       : 36
+interm_epoch        : 5
+label_smooth        : 0.1
+layer               : 0
+layers              : 20
+log_interval        : 100
+lr                  : 0.025
+lr_steps            : [30, 60]
+momentum            : 0.9
+multigpu            : False
+n_shots             : None
+name                : tmp
+noise               : False
+num_workers         : 0
+opt                 : sgd
+pretrained          : False
+save_dir            : ./checkpoints
+scheduler           : None
+seed                : 1111
+split               : predefined
+test_batch_size     : 64
+timm_aug            : False
+val                 : False
+wd                  : 0.0001
+
+
+Experiment dir: ./checkpoints/tmp-75d5573-1111
+
+loading the CIFAR10 dataset...
+Files already downloaded and verified
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, 50000 train samples (checksum=120.708), 10000 test samples (checksum=121.529)
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-50p-b3289ac-1111/checkpoint.pt...
+404 Client Error. (Request ID: Root=1-68a09923-1d13178440c904aa29ea4f08;e69ea3cd-3a10-4d6e-8ac8-01ce63a88838)
+
+Entry Not Found for url: https://huggingface.co/SamsungSAILMontreal/ghn3/resolve/main//shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-50p-b3289ac-1111/checkpoint.pt. 
+Trying to load from local file...
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-50p-b3289ac-1111/checkpoint.pt with 4531500 parameters is done!
+WARNING: unrecognized shape torch.Size([128, 4, 3, 3]), so the closest shape at index [np.int64(128), np.int64(8), np.int64(3), np.int64(3)] will be used instead.
+number of parameter tensors predicted using GHN: 161, total parameters predicted: 22992714 (MATCHED!), time to predict (on CPU): 0.1421 sec
+
+Starting training RESNEXT50_32X4D with 22992714 parameters!
+
+epoch=001/001, lr=2.500000e-02
+batch=0001/0391 	 loss=7.4204	top1=12.5000	top5=65.6250 	 0.3220 (sec/batch), mem ram/gpu: 1.65/5.65 (G)
+batch=0100/0391 	 loss=4.1516	top1=18.1250	top5=68.5625 	 0.1103 (sec/batch), mem ram/gpu: 1.67/5.65 (G)
+batch=0200/0391 	 loss=3.7512	top1=20.2266	top5=71.3477 	 0.1079 (sec/batch), mem ram/gpu: 1.67/5.65 (G)
+batch=0300/0391 	 loss=3.5022	top1=22.1589	top5=72.6042 	 0.1071 (sec/batch), mem ram/gpu: 1.67/5.65 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=299
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+batch=0390/0391 	 loss=3.3288	top1=23.7760	top5=73.8381 	 0.1078 (sec/batch), mem ram/gpu: 1.67/5.65 (G)
+batch=0391/0391 	 loss=3.3268	top1=23.8040	top5=73.8540 	 0.1078 (sec/batch), mem ram/gpu: 1.67/5.65 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=390
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+done at 20250816-104431!
+loading the cifar10 dataset...
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, none train samples (checksum=none), 10000 test samples (checksum=121.529)
+Model RESNEXT50_32X4D with 22.992714 parameters loaded from epoch 0, step 390.
+Running evaluation for RESNEXT50_32X4D with 22.99M parameters...
+
+testing: top1=36.05, top5=88.90 (10000 eval samples, time=4.08 seconds)
+
+testing: top1=36.050, top5=88.900 (10000 eval samples, time=4.08 seconds)
+
+
+Environment:
+git commit          : 75d5573
+hostname            : clx-a-02.rc.rit.edu
+torch               : 2.5.1
+torchvision         : 0.20.1
+cuda available      : True
+cudnn enabled       : True
+cuda version        : 12.4
+start time          : 20250816-104445
+
+Script Arguments (train_net mode):
+amp                 : False
+arch                : resnext50_32x4d
+auxiliary           : False
+auxiliary_weight    : 0.4
+batch_size          : 128
+bce                 : False
+beta                : 1e-05
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-60p-d442e08-1111/checkpoint.pt
+compile             : None
+cutout              : False
+cutout_length       : 16
+data_dir            : ./data
+dataset             : cifar10
+debug               : 0
+device              : cuda
+drop_path_prob      : 0
+epochs              : 1
+gamma               : 0.1
+grad_clip           : 5
+imsize              : 32
+init                : rand
+init_channels       : 36
+interm_epoch        : 5
+label_smooth        : 0.1
+layer               : 0
+layers              : 20
+log_interval        : 100
+lr                  : 0.025
+lr_steps            : [30, 60]
+momentum            : 0.9
+multigpu            : False
+n_shots             : None
+name                : tmp
+noise               : False
+num_workers         : 0
+opt                 : sgd
+pretrained          : False
+save_dir            : ./checkpoints
+scheduler           : None
+seed                : 1111
+split               : predefined
+test_batch_size     : 64
+timm_aug            : False
+val                 : False
+wd                  : 0.0001
+
+
+Experiment dir: ./checkpoints/tmp-75d5573-1111
+
+loading the CIFAR10 dataset...
+Files already downloaded and verified
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, 50000 train samples (checksum=120.708), 10000 test samples (checksum=121.529)
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-60p-d442e08-1111/checkpoint.pt...
+404 Client Error. (Request ID: Root=1-68a09960-1a8572d7171749da52f1a2fa;1a266964-9aff-4e08-b1d9-f4de91c02a07)
+
+Entry Not Found for url: https://huggingface.co/SamsungSAILMontreal/ghn3/resolve/main//shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-60p-d442e08-1111/checkpoint.pt. 
+Trying to load from local file...
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-60p-d442e08-1111/checkpoint.pt with 4531500 parameters is done!
+WARNING: unrecognized shape torch.Size([128, 4, 3, 3]), so the closest shape at index [np.int64(128), np.int64(8), np.int64(3), np.int64(3)] will be used instead.
+number of parameter tensors predicted using GHN: 161, total parameters predicted: 22992714 (MATCHED!), time to predict (on CPU): 0.1544 sec
+
+Starting training RESNEXT50_32X4D with 22992714 parameters!
+
+epoch=001/001, lr=2.500000e-02
+batch=0001/0391 	 loss=10.0218	top1=14.0625	top5=50.7812 	 0.3110 (sec/batch), mem ram/gpu: 1.66/5.65 (G)
+batch=0100/0391 	 loss=4.1129	top1=19.8203	top5=69.0625 	 0.1105 (sec/batch), mem ram/gpu: 1.67/5.65 (G)
+batch=0200/0391 	 loss=3.9482	top1=22.1992	top5=70.7070 	 0.1082 (sec/batch), mem ram/gpu: 1.67/5.65 (G)
+batch=0300/0391 	 loss=3.7697	top1=23.7161	top5=72.0260 	 0.1074 (sec/batch), mem ram/gpu: 1.67/5.65 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=299
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+batch=0390/0391 	 loss=3.5636	top1=25.0561	top5=73.2492 	 0.1084 (sec/batch), mem ram/gpu: 1.67/5.65 (G)
+batch=0391/0391 	 loss=3.5627	top1=25.0640	top5=73.2580 	 0.1083 (sec/batch), mem ram/gpu: 1.68/5.65 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=390
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+done at 20250816-104532!
+loading the cifar10 dataset...
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, none train samples (checksum=none), 10000 test samples (checksum=121.529)
+Model RESNEXT50_32X4D with 22.992714 parameters loaded from epoch 0, step 390.
+Running evaluation for RESNEXT50_32X4D with 22.99M parameters...
+
+testing: top1=32.56, top5=78.64 (10000 eval samples, time=4.13 seconds)
+
+testing: top1=32.560, top5=78.640 (10000 eval samples, time=4.13 seconds)
+
+
+Environment:
+git commit          : 75d5573
+hostname            : clx-a-02.rc.rit.edu
+torch               : 2.5.1
+torchvision         : 0.20.1
+cuda available      : True
+cudnn enabled       : True
+cuda version        : 12.4
+start time          : 20250816-104546
+
+Script Arguments (train_net mode):
+amp                 : False
+arch                : resnext50_32x4d
+auxiliary           : False
+auxiliary_weight    : 0.4
+batch_size          : 128
+bce                 : False
+beta                : 1e-05
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-70p-d442e08-1111/checkpoint.pt
+compile             : None
+cutout              : False
+cutout_length       : 16
+data_dir            : ./data
+dataset             : cifar10
+debug               : 0
+device              : cuda
+drop_path_prob      : 0
+epochs              : 1
+gamma               : 0.1
+grad_clip           : 5
+imsize              : 32
+init                : rand
+init_channels       : 36
+interm_epoch        : 5
+label_smooth        : 0.1
+layer               : 0
+layers              : 20
+log_interval        : 100
+lr                  : 0.025
+lr_steps            : [30, 60]
+momentum            : 0.9
+multigpu            : False
+n_shots             : None
+name                : tmp
+noise               : False
+num_workers         : 0
+opt                 : sgd
+pretrained          : False
+save_dir            : ./checkpoints
+scheduler           : None
+seed                : 1111
+split               : predefined
+test_batch_size     : 64
+timm_aug            : False
+val                 : False
+wd                  : 0.0001
+
+
+Experiment dir: ./checkpoints/tmp-75d5573-1111
+
+loading the CIFAR10 dataset...
+Files already downloaded and verified
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, 50000 train samples (checksum=120.708), 10000 test samples (checksum=121.529)
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-70p-d442e08-1111/checkpoint.pt...
+404 Client Error. (Request ID: Root=1-68a0999c-769e0e0e7e71645e1d326242;e80ec90a-f443-4da8-89aa-beab44cd5bd3)
+
+Entry Not Found for url: https://huggingface.co/SamsungSAILMontreal/ghn3/resolve/main//shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-70p-d442e08-1111/checkpoint.pt. 
+Trying to load from local file...
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-70p-d442e08-1111/checkpoint.pt with 4531500 parameters is done!
+WARNING: unrecognized shape torch.Size([128, 4, 3, 3]), so the closest shape at index [np.int64(128), np.int64(8), np.int64(3), np.int64(3)] will be used instead.
+number of parameter tensors predicted using GHN: 161, total parameters predicted: 22992714 (MATCHED!), time to predict (on CPU): 0.1496 sec
+
+Starting training RESNEXT50_32X4D with 22992714 parameters!
+
+epoch=001/001, lr=2.500000e-02
+batch=0001/0391 	 loss=6.4390	top1=17.1875	top5=63.2812 	 0.3082 (sec/batch), mem ram/gpu: 1.67/5.65 (G)
+batch=0100/0391 	 loss=4.0146	top1=18.3203	top5=67.1406 	 0.1101 (sec/batch), mem ram/gpu: 1.69/5.65 (G)
+batch=0200/0391 	 loss=3.6548	top1=21.1406	top5=69.9688 	 0.1077 (sec/batch), mem ram/gpu: 1.69/5.65 (G)
+batch=0300/0391 	 loss=3.4070	top1=23.0859	top5=71.8698 	 0.1069 (sec/batch), mem ram/gpu: 1.69/5.65 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=299
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+batch=0390/0391 	 loss=3.2792	top1=24.0304	top5=73.1270 	 0.1078 (sec/batch), mem ram/gpu: 1.69/5.65 (G)
+batch=0391/0391 	 loss=3.2797	top1=24.0400	top5=73.1160 	 0.1104 (sec/batch), mem ram/gpu: 1.70/5.65 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=390
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+done at 20250816-104634!
+loading the cifar10 dataset...
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, none train samples (checksum=none), 10000 test samples (checksum=121.529)
+Model RESNEXT50_32X4D with 22.992714 parameters loaded from epoch 0, step 390.
+Running evaluation for RESNEXT50_32X4D with 22.99M parameters...
+
+testing: top1=32.16, top5=71.30 (10000 eval samples, time=4.11 seconds)
+
+testing: top1=32.160, top5=71.300 (10000 eval samples, time=4.11 seconds)
+
+
+Environment:
+git commit          : 75d5573
+hostname            : clx-a-02.rc.rit.edu
+torch               : 2.5.1
+torchvision         : 0.20.1
+cuda available      : True
+cudnn enabled       : True
+cuda version        : 12.4
+start time          : 20250816-104648
+
+Script Arguments (train_net mode):
+amp                 : False
+arch                : resnext50_32x4d
+auxiliary           : False
+auxiliary_weight    : 0.4
+batch_size          : 128
+bce                 : False
+beta                : 1e-05
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-80p-d442e08-1111/checkpoint.pt
+compile             : None
+cutout              : False
+cutout_length       : 16
+data_dir            : ./data
+dataset             : cifar10
+debug               : 0
+device              : cuda
+drop_path_prob      : 0
+epochs              : 1
+gamma               : 0.1
+grad_clip           : 5
+imsize              : 32
+init                : rand
+init_channels       : 36
+interm_epoch        : 5
+label_smooth        : 0.1
+layer               : 0
+layers              : 20
+log_interval        : 100
+lr                  : 0.025
+lr_steps            : [30, 60]
+momentum            : 0.9
+multigpu            : False
+n_shots             : None
+name                : tmp
+noise               : False
+num_workers         : 0
+opt                 : sgd
+pretrained          : False
+save_dir            : ./checkpoints
+scheduler           : None
+seed                : 1111
+split               : predefined
+test_batch_size     : 64
+timm_aug            : False
+val                 : False
+wd                  : 0.0001
+
+
+Experiment dir: ./checkpoints/tmp-75d5573-1111
+
+loading the CIFAR10 dataset...
+Files already downloaded and verified
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, 50000 train samples (checksum=120.708), 10000 test samples (checksum=121.529)
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-80p-d442e08-1111/checkpoint.pt...
+404 Client Error. (Request ID: Root=1-68a099da-15b1ccec1f307a3200b6f6b3;23f3d71d-327a-4ad2-bda2-f00dcf7705c5)
+
+Entry Not Found for url: https://huggingface.co/SamsungSAILMontreal/ghn3/resolve/main//shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-80p-d442e08-1111/checkpoint.pt. 
+Trying to load from local file...
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-80p-d442e08-1111/checkpoint.pt with 4531500 parameters is done!
+WARNING: unrecognized shape torch.Size([128, 4, 3, 3]), so the closest shape at index [np.int64(128), np.int64(8), np.int64(3), np.int64(3)] will be used instead.
+number of parameter tensors predicted using GHN: 161, total parameters predicted: 22992714 (MATCHED!), time to predict (on CPU): 0.1510 sec
+
+Starting training RESNEXT50_32X4D with 22992714 parameters!
+
+epoch=001/001, lr=2.500000e-02
+batch=0001/0391 	 loss=7.2263	top1=9.3750	top5=47.6562 	 0.3102 (sec/batch), mem ram/gpu: 1.67/5.65 (G)
+batch=0100/0391 	 loss=3.9366	top1=16.9375	top5=66.1719 	 0.1104 (sec/batch), mem ram/gpu: 1.69/5.65 (G)
+batch=0200/0391 	 loss=3.6258	top1=19.5977	top5=69.1406 	 0.1080 (sec/batch), mem ram/gpu: 1.69/5.65 (G)
+batch=0300/0391 	 loss=3.3829	top1=21.5208	top5=71.3359 	 0.1073 (sec/batch), mem ram/gpu: 1.69/5.65 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=299
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+batch=0390/0391 	 loss=3.1792	top1=23.5016	top5=73.3754 	 0.1083 (sec/batch), mem ram/gpu: 1.70/5.65 (G)
+batch=0391/0391 	 loss=3.1776	top1=23.5200	top5=73.3920 	 0.1083 (sec/batch), mem ram/gpu: 1.70/5.65 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=390
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+done at 20250816-104735!
+loading the cifar10 dataset...
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, none train samples (checksum=none), 10000 test samples (checksum=121.529)
+Model RESNEXT50_32X4D with 22.992714 parameters loaded from epoch 0, step 390.
+Running evaluation for RESNEXT50_32X4D with 22.99M parameters...
+
+testing: top1=38.02, top5=82.56 (10000 eval samples, time=4.12 seconds)
+
+testing: top1=38.020, top5=82.560 (10000 eval samples, time=4.12 seconds)
+
+
+Environment:
+git commit          : 75d5573
+hostname            : clx-a-02.rc.rit.edu
+torch               : 2.5.1
+torchvision         : 0.20.1
+cuda available      : True
+cudnn enabled       : True
+cuda version        : 12.4
+start time          : 20250816-104749
+
+Script Arguments (train_net mode):
+amp                 : False
+arch                : resnext50_32x4d
+auxiliary           : False
+auxiliary_weight    : 0.4
+batch_size          : 128
+bce                 : False
+beta                : 1e-05
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-90p-d442e08-1111/checkpoint.pt
+compile             : None
+cutout              : False
+cutout_length       : 16
+data_dir            : ./data
+dataset             : cifar10
+debug               : 0
+device              : cuda
+drop_path_prob      : 0
+epochs              : 1
+gamma               : 0.1
+grad_clip           : 5
+imsize              : 32
+init                : rand
+init_channels       : 36
+interm_epoch        : 5
+label_smooth        : 0.1
+layer               : 0
+layers              : 20
+log_interval        : 100
+lr                  : 0.025
+lr_steps            : [30, 60]
+momentum            : 0.9
+multigpu            : False
+n_shots             : None
+name                : tmp
+noise               : False
+num_workers         : 0
+opt                 : sgd
+pretrained          : False
+save_dir            : ./checkpoints
+scheduler           : None
+seed                : 1111
+split               : predefined
+test_batch_size     : 64
+timm_aug            : False
+val                 : False
+wd                  : 0.0001
+
+
+Experiment dir: ./checkpoints/tmp-75d5573-1111
+
+loading the CIFAR10 dataset...
+Files already downloaded and verified
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, 50000 train samples (checksum=120.708), 10000 test samples (checksum=121.529)
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-90p-d442e08-1111/checkpoint.pt...
+404 Client Error. (Request ID: Root=1-68a09a17-40f5508f780bfa5d680fca90;f99e1d42-d766-4467-b9a4-a550bfc0ad72)
+
+Entry Not Found for url: https://huggingface.co/SamsungSAILMontreal/ghn3/resolve/main//shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-90p-d442e08-1111/checkpoint.pt. 
+Trying to load from local file...
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-90p-d442e08-1111/checkpoint.pt with 4531500 parameters is done!
+WARNING: unrecognized shape torch.Size([128, 4, 3, 3]), so the closest shape at index [np.int64(128), np.int64(8), np.int64(3), np.int64(3)] will be used instead.
+number of parameter tensors predicted using GHN: 161, total parameters predicted: 22992714 (MATCHED!), time to predict (on CPU): 0.1446 sec
+
+Starting training RESNEXT50_32X4D with 22992714 parameters!
+
+epoch=001/001, lr=2.500000e-02
+batch=0001/0391 	 loss=6.6930	top1=17.1875	top5=71.0938 	 0.3148 (sec/batch), mem ram/gpu: 1.65/5.65 (G)
+batch=0100/0391 	 loss=3.6138	top1=20.3672	top5=71.0938 	 0.1102 (sec/batch), mem ram/gpu: 1.67/5.65 (G)
+batch=0200/0391 	 loss=3.3970	top1=23.0078	top5=72.8398 	 0.1079 (sec/batch), mem ram/gpu: 1.67/5.65 (G)
+batch=0300/0391 	 loss=3.1930	top1=25.0859	top5=74.5833 	 0.1072 (sec/batch), mem ram/gpu: 1.67/5.65 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=299
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+batch=0390/0391 	 loss=3.0249	top1=26.9010	top5=76.1779 	 0.1089 (sec/batch), mem ram/gpu: 1.68/5.65 (G)
+batch=0391/0391 	 loss=3.0234	top1=26.9260	top5=76.1860 	 0.1089 (sec/batch), mem ram/gpu: 1.68/5.65 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=390
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+done at 20250816-104836!
+loading the cifar10 dataset...
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, none train samples (checksum=none), 10000 test samples (checksum=121.529)
+Model RESNEXT50_32X4D with 22.992714 parameters loaded from epoch 0, step 390.
+Running evaluation for RESNEXT50_32X4D with 22.99M parameters...
+
+testing: top1=39.89, top5=84.44 (10000 eval samples, time=4.08 seconds)
+
+testing: top1=39.890, top5=84.440 (10000 eval samples, time=4.09 seconds)
+
+
+Environment:
+git commit          : 75d5573
+hostname            : clx-a-02.rc.rit.edu
+torch               : 2.5.1
+torchvision         : 0.20.1
+cuda available      : True
+cudnn enabled       : True
+cuda version        : 12.4
+start time          : 20250816-104850
+
+Script Arguments (train_net mode):
+amp                 : False
+arch                : resnext50_32x4d
+auxiliary           : False
+auxiliary_weight    : 0.4
+batch_size          : 128
+bce                 : False
+beta                : 1e-05
+ckpt                : /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-b3289ac-1111/checkpoint.pt
+compile             : None
+cutout              : False
+cutout_length       : 16
+data_dir            : ./data
+dataset             : cifar10
+debug               : 0
+device              : cuda
+drop_path_prob      : 0
+epochs              : 1
+gamma               : 0.1
+grad_clip           : 5
+imsize              : 32
+init                : rand
+init_channels       : 36
+interm_epoch        : 5
+label_smooth        : 0.1
+layer               : 0
+layers              : 20
+log_interval        : 100
+lr                  : 0.025
+lr_steps            : [30, 60]
+momentum            : 0.9
+multigpu            : False
+n_shots             : None
+name                : tmp
+noise               : False
+num_workers         : 0
+opt                 : sgd
+pretrained          : False
+save_dir            : ./checkpoints
+scheduler           : None
+seed                : 1111
+split               : predefined
+test_batch_size     : 64
+timm_aug            : False
+val                 : False
+wd                  : 0.0001
+
+
+Experiment dir: ./checkpoints/tmp-75d5573-1111
+
+loading the CIFAR10 dataset...
+Files already downloaded and verified
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, 50000 train samples (checksum=120.708), 10000 test samples (checksum=121.529)
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-b3289ac-1111/checkpoint.pt...
+404 Client Error. (Request ID: Root=1-68a09a54-29f83336036dee7c2c9fc976;22d0159d-8595-47cd-b21f-054b73d445c9)
+
+Entry Not Found for url: https://huggingface.co/SamsungSAILMontreal/ghn3/resolve/main//shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-b3289ac-1111/checkpoint.pt. 
+Trying to load from local file...
+loading /shared/rc/nlagent/checkpoints/cifar10/ghn3tm8-c10-b3289ac-1111/checkpoint.pt with 4531500 parameters is done!
+WARNING: unrecognized shape torch.Size([128, 4, 3, 3]), so the closest shape at index [np.int64(128), np.int64(8), np.int64(3), np.int64(3)] will be used instead.
+number of parameter tensors predicted using GHN: 161, total parameters predicted: 22992714 (MATCHED!), time to predict (on CPU): 0.1524 sec
+
+Starting training RESNEXT50_32X4D with 22992714 parameters!
+
+epoch=001/001, lr=2.500000e-02
+batch=0001/0391 	 loss=5.9924	top1=17.1875	top5=58.5938 	 0.3190 (sec/batch), mem ram/gpu: 1.65/5.65 (G)
+batch=0100/0391 	 loss=3.6911	top1=16.9922	top5=65.0000 	 0.1103 (sec/batch), mem ram/gpu: 1.67/5.65 (G)
+batch=0200/0391 	 loss=3.4702	top1=19.1875	top5=67.3320 	 0.1079 (sec/batch), mem ram/gpu: 1.67/5.65 (G)
+batch=0300/0391 	 loss=3.2752	top1=20.2682	top5=69.2344 	 0.1100 (sec/batch), mem ram/gpu: 1.67/5.65 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=299
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+batch=0390/0391 	 loss=3.0922	top1=21.8229	top5=71.3021 	 0.1103 (sec/batch), mem ram/gpu: 1.67/5.65 (G)
+batch=0391/0391 	 loss=3.0907	top1=21.8340	top5=71.3080 	 0.1103 (sec/batch), mem ram/gpu: 1.67/5.65 (G)
+
+saved the checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint.pt at epoch=0, step=390
+saved the intermediate checkpoint to ./checkpoints/tmp-75d5573-1111/checkpoint_epoch1.pt
+done at 20250816-104938!
+loading the cifar10 dataset...
+Files already downloaded and verified
+loaded CIFAR10: 10 classes, none train samples (checksum=none), 10000 test samples (checksum=121.529)
+Model RESNEXT50_32X4D with 22.992714 parameters loaded from epoch 0, step 390.
+Running evaluation for RESNEXT50_32X4D with 22.99M parameters...
+
+testing: top1=28.82, top5=82.47 (10000 eval samples, time=4.14 seconds)
+
+testing: top1=28.820, top5=82.470 (10000 eval samples, time=4.14 seconds)
